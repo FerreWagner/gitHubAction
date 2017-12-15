@@ -38,5 +38,5 @@ What is this?
 * jQuery：[http://jquery.com](http://jquery.com)
 * Bootstrap：[http://getbootstrap.com](http://getbootstrap.com)
 
-##版权信息
+##  **版权信息**
 由Ferre开发 请自行遵循以上项目的协议
