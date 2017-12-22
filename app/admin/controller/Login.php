@@ -4,6 +4,7 @@ namespace app\admin\controller;
 use think\Request;
 use app\admin\common\Base;
 use think\Session;
+use think\Validate;
 
 class Login extends Base
 {
@@ -28,7 +29,10 @@ class Login extends Base
     public function login(Request $request)
     {
         if ($request->isPost()){
-
+            
+            $token_va = Validate::token('__token__','',['__token__'=>input('param.__token__')]);    //CSRF validate
+            if (!$token_va) die('CSRF ATTACK.');
+            
             $admin_data = input('post.');
             $res = db('admin')->where('username', $admin_data['username'])->select();
             
@@ -42,14 +46,17 @@ class Login extends Base
             
             if (!$res){
                 $this->error('Error,Dear');
-            }elseif ($res[0]['password'] == sha1(md5($admin_data['password'].'alexa'))){
+            }elseif ($res[0]['password'] == sha1($admin_data['password'])){
                 
                 //admin data detail
                 db('admin')->where('username', $res[0]['username'])->setInc('count');
-                db('admin')->where('username', $res[0]['username'])->update(['lasttime' => date("Y-m-d H:i:s",time())]);
+                db('admin')->where('username', $res[0]['username'])->update(['update_time' => time()]);
+                
+                //add session
                 Session::set('user_name', $res[0]['username']);
                 Session::set('user_data', $res[0]);
                 return $this->redirect('admin/index/index');
+                
             }else {
                 $this->error('Error,Dear');
             }
