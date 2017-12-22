@@ -36,7 +36,7 @@ class Login extends Base
             
             $admin_data = input('post.');
             $res = AdminModel::where('username', $admin_data['username'])->find(1);
-            
+            dump($res);die;
             //admin log data add
             db('alog')->insert([
                 'type' => $res ? 1 : 0,

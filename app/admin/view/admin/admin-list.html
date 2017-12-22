@@ -9,6 +9,14 @@
             <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"  href="javascript:location.replace(location.href);" title="刷新"><i class="layui-icon" style="line-height:30px">ဂ</i></a>
         </div>
         <div class="x-body">
+        
+        {if $Think.session.user_data.role == 0}
+	        <xblock>
+		        <a href="{:url('admin/admin/add')}"><button class="layui-btn"><i class="layui-icon"></i>添加</button></a>
+		        <span class="x-right" style="line-height:40px">共有管理员：{$count} 位</span>
+	        </xblock>
+    	{/if}    
+        
             <table class="layui-table">
                 <thead>
                     <tr>
@@ -24,21 +32,35 @@
                         <th>
                             邮箱
                         </th>
+                        
+                        
+                        
+                        
+                        {if $Think.session.user_data.role == 0}
                         <th>
                             角色
                         </th>
                         <th>
                             加入时间
                         </th>
+                        {/if}
+                        
+                        
                                                 <th>
                             最后登录时间
                         </th>
+                        
+                        
+                        {if $Think.session.user_data.role == 0}
                         <th>
                             状态
                         </th>
+                        
                         <th>
                             操作
                         </th>
+                        {/if}
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -57,18 +79,24 @@
                         <td>
                             {$ad.email}
                         </td>
-                        <td>
-                           {if $ad.role !== 1}超级管理员{else /}管理员{/if}
-                        </td>
-                        <td>
-                            {$ad.create_time}
-                        </td>
+                        
+                        
+                        {if $Think.session.user_data.role == 0}
+	                        <td>
+	                        {if $ad.role !== 1}超级管理员{else /}管理员{/if}
+	                        </td>
+	                        <td>
+	                            {$ad.create_time}
+	                        </td>
+                        {/if}
                         <td>
                             {$ad.update_time}
                         </td>
+                        
+                        {if $Think.session.user_data.role == 0}
                         <td class="td-status">
                             <span class="layui-btn {if $ad.switch == 'false'}layui-btn-danger{/if} layui-btn-mini">
-                              <a href="{:url('admin/admin/trans', ['id' => $ad['id']])}" style="color: white;"> {if $ad.switch == 'false'}已禁用{else /}已启用{/if}</a>
+                              <a href="{:url('admin/admin/trans', ['id' => $ad['id']])}" style="color: white;"> {if $ad.switch == 'false'}卸任状态{else /}在职状态{/if}</a>
                             </span>
                         </td>
                         <td class="td-manage">
@@ -79,6 +107,8 @@
                                 <i class="layui-icon"></i>
                             </a>
                         </td>
+                        {/if}
+                        
                     </tr>
                     
                     {/volist}

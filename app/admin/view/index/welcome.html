@@ -4,8 +4,8 @@
             <blockquote class="layui-elem-quote">
                 欢迎使用x-admin 后台模版！<span class="f-14">v1.0</span>官方交流群： 519492808
             </blockquote>
-            <p>登录次数：{$Think.session.user_data.count} </p>
-            <p>登录IP：{$_SERVER['REMOTE_ADDR']}  上次登录时间： {$Think.session.user_data.lasttime}</p>
+            <p>登录次数：{:session('user_data.count')}</p>
+            <p>登录IP：{$_SERVER['REMOTE_ADDR']}  上次登录时间： {:session('user_data.update_time')}</p>
             <fieldset class="layui-elem-field layui-field-title site-title">
               <legend><a name="default">信息统计</a></legend>
             </fieldset>

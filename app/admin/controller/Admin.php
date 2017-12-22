@@ -6,6 +6,7 @@ namespace app\admin\controller;
 use app\admin\common\Base;
 use app\admin\model\Admin as AdminModel;
 use think\Request;
+use think\Loader;
 
 
 class Admin extends Base
@@ -19,7 +20,13 @@ class Admin extends Base
     {
         
         $admin = AdminModel::all();
-        $this->view->assign('admin', $admin);
+        $count = AdminModel::count();
+        
+        $this->view->assign([
+            'admin' => $admin,
+            'count' => $count,
+        ]);
+        
         return $this->view->fetch('admin-list');
         
     }
@@ -36,7 +43,8 @@ class Admin extends Base
         
         if ($request->isPost()){
             $update = $request->param();
-            $update['password'] = empty($update['password']) ? $admin['password'] : $update['password'];
+            $update['password']    = empty($update['password']) ? $admin['password'] : sha1($update['password']);
+            $update['update_time'] = time();
             
             $res = AdminModel::update($update);
             $res ? $this->redirect('admin/admin/index') : $this->error('数据更新失败');
@@ -47,6 +55,37 @@ class Admin extends Base
         return $this->view->fetch('admin-edit');
     }
     
+    
+    public function add(Request $request)
+    {
+        if ($request->isPost()){
+            $data = $request->param();
+            
+            if ($data['password'] != $data['repass']) $this->error('两次密填写不一致');
+            
+            $data['password']      = sha1($data['password']);
+            $data['create_time']   = time();
+            $data['update_time']   = time();
+            
+            
+            $validate = Loader::validate('Admin');
+            if(!$validate->scene('add')->check($data)){
+                $this->error($validate->getError());
+            }
+            
+            $model = new AdminModel();
+            $res   = $model->allowField(true)->save($data);
+            $res ? $this->redirect('admin/admin/index') : $this->error('管理员添加失败.');
+        }
+        
+        return $this->view->fetch('admin-add');
+    }
+    
+    
+    /**
+     * admin switch
+     * @param unknown $id
+     */
     public function trans($id)
     {
         $admin = AdminModel::where('id', $id)->field(['switch', 'id'])->find(1);
