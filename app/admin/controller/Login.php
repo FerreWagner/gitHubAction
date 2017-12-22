@@ -5,6 +5,7 @@ use think\Request;
 use app\admin\common\Base;
 use think\Session;
 use think\Validate;
+use app\admin\model\Admin as AdminModel;
 
 class Login extends Base
 {
@@ -30,11 +31,11 @@ class Login extends Base
     {
         if ($request->isPost()){
             
-            $token_va = Validate::token('__token__','',['__token__'=>input('param.__token__')]);    //CSRF validate
-            if (!$token_va) die('CSRF ATTACK.');
+            $token      = Validate::token('__token__','',['__token__'=>input('param.__token__')]);    //CSRF validate
+            if (!$token) die('CSRF ATTACK.');
             
             $admin_data = input('post.');
-            $res = db('admin')->where('username', $admin_data['username'])->select();
+            $res = AdminModel::where('username', $admin_data['username'])->find(1);
             
             //admin log data add
             db('alog')->insert([
@@ -46,15 +47,15 @@ class Login extends Base
             
             if (!$res){
                 $this->error('Error,Dear');
-            }elseif ($res[0]['password'] == sha1($admin_data['password'])){
+            }elseif ($res['password'] == sha1($admin_data['password'])){
                 
                 //admin data detail
-                db('admin')->where('username', $res[0]['username'])->setInc('count');
-                db('admin')->where('username', $res[0]['username'])->update(['update_time' => time()]);
+                AdminModel::where('username', $res['username'])->setInc('count');
+                AdminModel::where('username', $res['username'])->update(['update_time' => time()]);
                 
                 //add session
-                Session::set('user_name', $res[0]['username']);
-                Session::set('user_data', $res[0]);
+                Session::set('user_name', $res['username']);
+                Session::set('user_data', $res);
                 return $this->redirect('admin/index/index');
                 
             }else {
