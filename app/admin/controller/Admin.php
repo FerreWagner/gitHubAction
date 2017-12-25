@@ -19,7 +19,7 @@ class Admin extends Base
      *
      * @return \think\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         
         $admin = AdminModel::all();
