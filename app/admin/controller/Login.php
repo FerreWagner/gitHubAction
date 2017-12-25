@@ -35,8 +35,8 @@ class Login extends Base
             if (!$token) die('CSRF ATTACK.');
             
             $admin_data = input('post.');
-            $res = AdminModel::where('username', $admin_data['username'])->find(1);
-            dump($res);die;
+            $res = AdminModel::where('username', $admin_data['username'])->find();
+            
             //admin log data add
             db('alog')->insert([
                 'type' => $res ? 1 : 0,
