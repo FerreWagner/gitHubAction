@@ -21,10 +21,21 @@ class Admin extends Base
      */
     public function index(Request $request)
     {
+        $admin = AdminModel::paginate(6);
         
-        $admin = AdminModel::all();
+        //admin search function
+        if ($request->isPost()){
+            $search = $request->param();
+            
+            if (empty($search['start']) || empty($search['end'])){
+                $admin = AdminModel::where('username', 'like', '%'.$search['username'].'%')->paginate(6);
+            }else {
+                $admin = AdminModel::where('update_time', 'between', [strtotime($search['start']), strtotime($search['end'])])
+                                   ->where('username', 'like', '%'.$search['username'].'%')->paginate(6);
+            }
+        }
+        
         $count = AdminModel::count();
-        
         $this->view->assign([
             'admin' => $admin,
             'count' => $count,

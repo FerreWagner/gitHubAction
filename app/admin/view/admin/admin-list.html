@@ -1,4 +1,6 @@
 {include file='public/header' /}
+<link rel="stylesheet" href="__STATIC__/lib/bootstrap/css/bootstrap.css">
+
     <body>
         <div class="x-nav">
             <span class="layui-breadcrumb">
@@ -132,7 +134,7 @@
                     {/volist}
                 </tbody>
             </table>
-
+<div style="text-align: center;">{$admin->render()}</div>
             <div id="page"></div>
         </div>
         {include file='public/base_js' /}
