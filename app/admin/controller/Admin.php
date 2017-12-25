@@ -12,6 +12,8 @@ use think\Loader;
 class Admin extends Base
 {
     
+    #Tips:超级管理员为root权限，理论仅允许开放一个账户，请谨慎添加
+    
     /**
      * 显示资源列表
      *
@@ -57,6 +59,11 @@ class Admin extends Base
     }
     
     
+    /**
+     * 
+     * @param Request $request
+     * @return string
+     */
     public function add(Request $request)
     {
         if ($request->isPost()){
@@ -82,6 +89,12 @@ class Admin extends Base
         return $this->view->fetch('admin-add');
     }
     
+    public function delete($id)
+    {
+        $res = AdminModel::destroy($id);
+        $res ? $this->redirect('admin/admin/index') : $this->error('删除管理员失败');
+    }
+    
     
     /**
      * admin switch
@@ -94,7 +107,6 @@ class Admin extends Base
         $res = AdminModel::update(['switch' => $admin['switch']], ['id' => $admin['id']]); //update
         
         $res ? $this->redirect('admin/admin/index') : $this->error('更新失败');
-        
     }
     
     

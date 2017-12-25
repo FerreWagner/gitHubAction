@@ -103,7 +103,7 @@
                             <a title="编辑" href="{:url('admin/admin/edit', ['id' => $ad['id']])}" class="ml-5" style="text-decoration:none">
                                 <i class="layui-icon"></i>
                             </a>
-                            <a title="删除" href="javascript:;" onclick="admin_del(this,'1')" style="text-decoration:none">
+                            <a title="删除" onclick="return confirm('你确定删除该管理员？')" href="{:url('admin/admin/delete', ['id' => $ad['id']])}" style="text-decoration:none">
                                 <i class="layui-icon"></i>
                             </a>
                         </td>

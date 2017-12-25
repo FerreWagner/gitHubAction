@@ -9,13 +9,22 @@ use app\admin\model\Article as ArticleModel;
 
 class Article extends Base
 {
+    
     /**
      * 显示资源列表
      *
      * @return \think\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        //search function
+        if ($request->isPost()){
+            
+            $search  = $request->param();
+            $article = db('article')->where('time', 'between', [strtotime($search['start']), strtotime($search['end'])])->where('title', 'like', '%'.$search['title'].'%')->paginate(6);
+            dump($article);die;
+        }
+        
         //list
         $article = db('article')->field('a.*,b.catename')->alias('a')->join('alexa_category b','a.cate=b.id')->order('a.id desc')->paginate(6);
         $this->view->assign('article', $article);
