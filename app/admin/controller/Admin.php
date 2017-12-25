@@ -11,6 +11,7 @@ use think\Loader;
 
 class Admin extends Base
 {
+    
     /**
      * 显示资源列表
      *
@@ -88,7 +89,7 @@ class Admin extends Base
      */
     public function trans($id)
     {
-        $admin = AdminModel::where('id', $id)->field(['switch', 'id'])->find(1);
+        $admin = AdminModel::where('id', $id)->field(['switch', 'id'])->find();
         $admin['switch'] = $admin['switch'] == 'true' ? 'false' : 'true';
         $res = AdminModel::update(['switch' => $admin['switch']], ['id' => $admin['id']]); //update
         
@@ -103,7 +104,12 @@ class Admin extends Base
      */
     public function logList()
     {
-        $log_data = db('alog')->paginate(8);
+        $log_data = db('alog')->where('name', session('user_name'))->paginate(8);
+        
+        if (session('user_data')['role'] == 0){
+            $log_data = db('alog')->paginate(8);
+        }
+        
         $this->view->assign('alog', $log_data);
         return $this->view->fetch('admin-log');
     }
