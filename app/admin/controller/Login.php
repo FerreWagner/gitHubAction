@@ -47,7 +47,7 @@ class Login extends Base
             
             if (!$res){
                 $this->error('Error,Dear');
-            }elseif ($res['password'] == sha1($admin_data['password'])){
+            }elseif (password_verify($res['password'], password_hash(sha1($admin_data['password']), PASSWORD_DEFAULT))){
                 
                 //admin data detail
                 AdminModel::where('username', $res['username'])->setInc('count');
