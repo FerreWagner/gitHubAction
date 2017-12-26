@@ -37,6 +37,11 @@ class Login extends Base
             $admin_data = input('post.');
             $res = AdminModel::where('username', $admin_data['username'])->find();
             
+            //卸任状态处理
+            if ($res['switch'] == 'false'){
+                $this->error('您已经被卸任了管理员职位');
+            }
+            
             //admin log data add
             db('alog')->insert([
                 'type' => $res ? 1 : 0,
