@@ -115,7 +115,7 @@ class Admin extends Base
     {
         $admin = AdminModel::where('id', $id)->field(['switch', 'id'])->find();
         $admin['switch'] = $admin['switch'] == 'true' ? 'false' : 'true';
-        $res = AdminModel::update(['switch' => $admin['switch']], ['id' => $admin['id']]); //update
+        $res   = AdminModel::update(['switch' => $admin['switch']], ['id' => $admin['id']]); //update
         
         $res ? $this->redirect('admin/admin/index') : $this->error('更新失败');
     }
@@ -127,13 +127,19 @@ class Admin extends Base
      */
     public function logList()
     {
-        $log_data = db('alog')->where('name', session('user_name'))->paginate(8);
+        $log_data  = db('alog')->where('name', session('user_name'))->paginate(8);
+        $log_count = db('alog')->where('name', session('user_name'))->count('id');
+        
         
         if (session('user_data')['role'] == 0){
-            $log_data = db('alog')->paginate(8);
+            $log_data  = db('alog')->paginate(8);
+            $log_count = db('alog')->count('id');
         }
         
-        $this->view->assign('alog', $log_data);
+        $this->view->assign([
+            'alog'      => $log_data,
+            'log_count' => $log_count,
+        ]);
         return $this->view->fetch('admin-log');
     }
     

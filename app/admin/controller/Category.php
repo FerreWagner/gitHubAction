@@ -36,7 +36,10 @@ class Category extends Base
             $_add ? $this->redirect('admin/category/index') : $this->error('Add Cate Error.Dear');
         }
         
-        $this->view->assign(['cate' => $cate, 'cate_count' => $cate_count]);
+        $this->view->assign([
+            'cate'       => $cate, 
+            'cate_count' => $cate_count,
+        ]);
         return $this->view->fetch('category-list');
     }
 

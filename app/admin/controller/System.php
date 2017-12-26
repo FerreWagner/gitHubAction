@@ -50,8 +50,12 @@ class System extends Base
             return ($res ? redirect('system/linkList') : $this->error('未添加成功'));
         }
         
-        $link_list = Link::all();
-        $this->assign('link_list', $link_list);
+        $link_list  = Link::all();
+        $link_count = Link::count();
+        $this->assign([
+            'link_list'  => $link_list,
+            'link_count' => $link_count,
+        ]);
         return $this->view->fetch('sys-link');
     }
     
