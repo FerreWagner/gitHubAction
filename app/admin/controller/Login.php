@@ -55,8 +55,12 @@ class Login extends Base
             }elseif (password_verify($res['password'], password_hash(sha1($admin_data['password']), PASSWORD_DEFAULT))){
                 
                 //admin data detail
-                AdminModel::where('username', $res['username'])->setInc('count');
-                AdminModel::where('username', $res['username'])->update(['update_time' => time()]);
+                $in_res = AdminModel::where('username', $res['username'])->setInc('count');
+                $up_res = AdminModel::where('username', $res['username'])->update(['update_time' => time()]);
+                
+                if (!$in_res || !$up_res){
+                    $this->error('admin data update error.');
+                }
                 
                 //add session
                 Session::set('user_name', $res['username']);
