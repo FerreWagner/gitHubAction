@@ -38,13 +38,11 @@ class Login extends Base
             $res = AdminModel::where('username', $admin_data['username'])->find();
             
             //卸任状态处理
-            if ($res['switch'] == config('switch.off')){
-                $this->error('您已经被卸任了管理员职位');
-            }
+            if ($res['switch'] == config('switch.off')) $this->error('您已经被卸任了管理员职位');
             
             //admin log data add
             db('alog')->insert([
-                'type' => $res ? 1 : 0,
+                'type' => password_verify($res['password'], password_hash(sha1($admin_data['password'].config('salt.password_salt')), PASSWORD_DEFAULT)) ? 1 : 0,
                 'name' => $admin_data['username'],
                 'ip'   => $_SERVER['REMOTE_ADDR'],
                 'time' => time()
@@ -59,9 +57,7 @@ class Login extends Base
                 $in_res = AdminModel::where('username', $res['username'])->setInc('count');
                 $up_res = AdminModel::where('username', $res['username'])->update(['update_time' => time()]);
                 
-                if (!$in_res || !$up_res){
-                    $this->error('admin data update error.');
-                }
+                if (!$in_res || !$up_res) $this->error('admin data update error.');
                 
                 //add session
                 Session::set('user_name', $res['username']);

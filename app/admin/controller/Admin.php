@@ -57,7 +57,7 @@ class Admin extends Base
         
         if ($request->isPost()){
             $update = $request->param();
-            $update['password']    = empty($update['password']) ? $admin['password'] : sha1($update['password']);
+            $update['password']    = empty($update['password']) ? $admin['password'] : sha1($update['password'].config('salt.password_salt'));
             $update['update_time'] = time();
             
             $res = AdminModel::update($update);
@@ -82,7 +82,7 @@ class Admin extends Base
             
             if ($data['password'] != $data['repass']) $this->error('两次密填写不一致');
             
-            $data['password']      = sha1($data['password']);
+            $data['password']      = sha1($data['password'].config('salt.password.salt'));
             $data['create_time']   = time();
             $data['update_time']   = time();
             
@@ -127,12 +127,12 @@ class Admin extends Base
      */
     public function logList()
     {
-        $log_data  = db('alog')->where('name', session('user_name'))->paginate(8);
+        $log_data  = db('alog')->where('name', session('user_name'))->order('id', 'desc')->paginate(8);
         $log_count = db('alog')->where('name', session('user_name'))->count('id');
         
         //root role
         if (session('user_data')['role'] == config('role.role_root')){
-            $log_data  = db('alog')->paginate(8);
+            $log_data  = db('alog')->order('id', 'desc')->paginate(8);
             $log_count = db('alog')->count('id');
         }
         
