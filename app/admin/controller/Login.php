@@ -32,13 +32,13 @@ class Login extends Base
         if ($request->isPost()){
             
             $token      = Validate::token('__token__','',['__token__'=>input('param.__token__')]);    //CSRF validate
-            if (!$token) die('CSRF ATTACK.');
+            if (!$token) $this->error('CSRF ATTACK.');
             
             $admin_data = input('post.');
             $res = AdminModel::where('username', $admin_data['username'])->find();
             
             //卸任状态处理
-            if ($res['switch'] == 'false'){
+            if ($res['switch'] == config('switch.off')){
                 $this->error('您已经被卸任了管理员职位');
             }
             
@@ -50,9 +50,10 @@ class Login extends Base
                 'time' => time()
             ]);
             
+            
             if (!$res){
                 $this->error('Error,Dear');
-            }elseif (password_verify($res['password'], password_hash(sha1($admin_data['password']), PASSWORD_DEFAULT))){
+            }elseif (password_verify($res['password'], password_hash(sha1($admin_data['password'].config('salt.password_salt')), PASSWORD_DEFAULT))){
                 
                 //admin data detail
                 $in_res = AdminModel::where('username', $res['username'])->setInc('count');

@@ -130,8 +130,8 @@ class Admin extends Base
         $log_data  = db('alog')->where('name', session('user_name'))->paginate(8);
         $log_count = db('alog')->where('name', session('user_name'))->count('id');
         
-        
-        if (session('user_data')['role'] == 0){
+        //root role
+        if (session('user_data')['role'] == config('role.role_root')){
             $log_data  = db('alog')->paginate(8);
             $log_count = db('alog')->count('id');
         }

@@ -12,8 +12,8 @@
         var myChart = echarts.init(document.getElementById('main'));
         option = {
         	    title : {
-        	        text: '某站点用户访问来源',
-        	        subtext: '纯属虚构',
+        	        text: 'Browser访问来源',
+        	        subtext: 'Alexa',
         	        x:'center'
         	    },
         	    tooltip : {
@@ -21,9 +21,9 @@
         	        formatter: "{a} <br/>{b} : {c} ({d}%)"
         	    },
         	    legend: {
-        	        orient: 'vertical',
+        	        orient: 'horizontal',
         	        left: 'left',
-        	        data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+        	        data: ['Chrome','FireFox','IE','Safari','未认证']
         	    },
         	    series : [
         	        {
@@ -32,11 +32,11 @@
         	            radius : '65%',
         	            center: ['50%', '60%'],
         	            data:[
-        	                {value:335, name:'直接访问'},
-        	                {value:310, name:'邮件营销'},
-        	                {value:234, name:'联盟广告'},
-        	                {value:135, name:'视频广告'},
-        	                {value:1548, name:'搜索引擎'}
+        	                {value:{$chrome}, name:'Chrome'},
+        	                {value:{$fox}, name:'FireFox'},
+        	                {value:{$ie}, name:'IE'},
+        	                {value:{$safari}, name:'Safari'},
+        	                {value:{$not}, name:'未认证'}
         	            ],
         	            itemStyle: {
         	                emphasis: {
