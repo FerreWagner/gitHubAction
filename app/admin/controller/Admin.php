@@ -13,6 +13,7 @@ class Admin extends Base
 {
     
     #Tips:超级管理员为root权限，理论仅允许开放一个账户，请谨慎添加
+    #Tips:二次开发权限相关，请在app/extra/action.php里进行方法写入
     
     /**
      * 显示资源列表
