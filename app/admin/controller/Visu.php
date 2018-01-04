@@ -91,7 +91,13 @@ class Visu extends Base
     
     public function area()
     {
-        
+        $ip = db('tourist')->column('ip');
+//         $a = file_get_contents('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip=42.236.93.76');
+//         dump($a);die;
+        //入库时接入三方接口对ip地域写入，此时查询
+//         foreach ($ip as $k => $v){
+//             $ip_data[] = file_get_contents('http://ip.taobao.com/service/getIpInfo.php?ip='.$v);
+//         }
         return $this->view->fetch();
     }
     
