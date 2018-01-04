@@ -8,13 +8,17 @@ use app\admin\common\Base;
 
 class Visu extends Base
 {
-    public function Browser()
+    /*
+     * TIPS:前台数据可视化请参照Echarts API开发,特别感谢Echarts
+     * 
+     */
+    public function browser()
     {
-        $chrome = db('artsee')->where('type', 'chrome')->count('id');
-        $fox    = db('artsee')->where('type', 'fox')->count('id');
-        $ie     = db('artsee')->where('type', 'like', '%ie%')->count('id');
-        $safari = db('artsee')->where('type', 'safari')->count('id');
-        $not    = db('artsee')->where('type', 'notidentify')->count('id');
+        $chrome = db('artsee')->where('type', 'chrome')->count();
+        $fox    = db('artsee')->where('type', 'fox')->count();
+        $ie     = db('artsee')->where('type', 'like', '%ie%')->count();
+        $safari = db('artsee')->where('type', 'safari')->count();
+        $not    = db('artsee')->where('type', 'notidentify')->count();
         
         $this->view->assign([
             'chrome' => $chrome,
@@ -28,7 +32,7 @@ class Visu extends Base
     }
     
     
-    public function View()
+    public function view()
     {
         //初始化
         $year  = config('date.year') - 1;
@@ -54,6 +58,40 @@ class Visu extends Base
             'view_date' => $view_date,
         ]);
 //         dump($see);die;
+        return $this->view->fetch();
+    }
+    
+    
+    /**
+     * 后台访问数据图表
+     */
+    public function end()
+    {
+        $error = $normal = $my = [];
+        
+        for ($i = 7; $i >= 1; $i --){
+            $where = [time() - 86400*$i, time() - 86400*($i - 1)];
+            if ($i == 1){
+                $where = [time() - 86400*$i, time()];
+            }
+            $error[]  = db('alog')->where('type', config('alog.error'))->whereTime('time', 'between', $where)->count();
+            $normal[] = db('alog')->where('type', config('alog.normal'))->whereTime('time', 'between', $where)->count();
+            $my[]     = db('alog')->where('type', config('alog.normal'))->where('name', session('user_name'))->whereTime('time', 'between', $where)->count();
+            
+        }
+        
+        $this->view->assign([
+            'error'   => $error,
+            'normal'  => $normal,
+            'my'      => $my,
+        ]);
+        
+        return $this->view->fetch();
+    }
+    
+    public function area()
+    {
+        
         return $this->view->fetch();
     }
     
