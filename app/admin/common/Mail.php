@@ -16,6 +16,7 @@ class Mail extends Controller
     {
         $this->mail = new PHPMailer();
         
+        //设置字符集
         $this->mail->CharSet = "utf-8";
         
         $this->mail->IsSMTP();
@@ -23,7 +24,7 @@ class Mail extends Controller
         $this->mail->SMTPAuth      = true;
         $this->mail->SMTPKeepAlive = true;
         
-        //$this->mail->SMTPSecure = "SSL"; 待开发
+        $this->mail->SMTPSecure = "SSL"; #待开发
         
         $this->mail->Host       = config('mail.host');
         $this->mail->Port       = config('mail.port');
@@ -45,20 +46,17 @@ class Mail extends Controller
         $content                = request()->param('content');
         $line                   = request()->param('line');
         
-        $this->mail->FromName   = $title;
-        
+        $this->mail->FromName   = $title ? $title : 'Hello';
         //标题，内容，和备用内容
-        $this->mail->Subject    = $title;
-        $this->mail->Body       = $content;
+        $this->mail->Subject    = $title ? $title : 'Hello';
+        $this->mail->Body       = $content ? $content : 'Nice To Meet You';
         
         //如果邮件不支持HTML格式，则替换成该纯文本模式邮件
         $this->mail->AltBody    = time();
-        
         $this->mail->IsHTML(true);
         
         // 设置邮件每行字符数
         $this->mail->WordWrap   = $line ? $line : 20; 
-        
         //$this->mail->MsgHTML($body);
     }
     
@@ -69,7 +67,8 @@ class Mail extends Controller
         $this->mail->AddReplyTo("回复地址","from");
         
         //设置收件的地址(to可随意) 
-        $this->mail->AddAddress("1573646491@qq.com","FirstName LastName");
+        //TODO
+        $this->mail->AddAddress("1573646491@qq.com","Alexa-Admin");
         $this->mail->AddAddress("收件人","to");
         
         //添加附件，此处附件与脚本位于相同目录下,否则填写完整路径
