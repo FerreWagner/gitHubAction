@@ -135,7 +135,7 @@ class Mail extends Controller
         return $this->mail->send();
     }
     
-
+    
     /**
      * 参数配置
      */
