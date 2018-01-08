@@ -11,18 +11,50 @@
         <div class="x-body">
             <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
               <ul class="layui-tab-title">
-                <li class="layui-this">root用户邮箱设置</li>
+                <li class="layui-this">后台root用户邮箱设置(Tips:每项必填)</li>
 
               </ul>
               <div class="layui-tab-content" >
                 <div class="layui-tab-item layui-show">
                     <form class="layui-form layui-form-pane" action="" method="post">
+                    <div class="layui-form-item">
+                            <label class="layui-form-label">
+                                <span class='x-red'>*</span>邮箱主机
+                            </label>
+                            <div class="layui-input-block">
+                                <input type="text" name="host" autocomplete="off" placeholder="smtp.gmail.com" class="layui-input" value="">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">
+                                <span class='x-red'>*</span>端口号
+                            </label>
+                            <div class="layui-input-block">
+                                <input type="text" name="port" autocomplete="off" placeholder="25" class="layui-input" value="">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">
+                                <span class='x-red'>*</span>用户名
+                            </label>
+                            <div class="layui-input-block">
+                                <input type="text" name="username" autocomplete="off" placeholder="xxx@gmail.com" class="layui-input" value="">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">
+                                <span class='x-red'>*</span>密码
+                            </label>
+                            <div class="layui-input-block">
+                                <input type="text" name="password" autocomplete="off" placeholder="******" class="layui-input" value="">
+                            </div>
+                        </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label">
                                 <span class='x-red'>*</span>外部标题
                             </label>
                             <div class="layui-input-block">
-                                <input type="text" name="outtitle" autocomplete="off" placeholder="控制在25个字、50个字节以内" class="layui-input" value="">
+                                <input type="text" name="outtitle" autocomplete="off" placeholder="您好我是Ferre,欢迎注册Alexa_Admin后台" class="layui-input" value="">
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -30,7 +62,7 @@
                                 <span class='x-red'>*</span>邮件标题
                             </label>
                             <div class="layui-input-block">
-                                <input type="text" name="title" autocomplete="off" placeholder="5个左右,8汉字以内,用英文,隔开" class="layui-input" value="">
+                                <input type="text" name="title" autocomplete="off" placeholder="您好我是Ferre,欢迎注册Alexa_Admin后台" class="layui-input" value="">
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -38,7 +70,7 @@
                                 <span class='x-red'>*</span>邮件内容
                             </label>
                             <div class="layui-input-block">
-                                <input type="text" name="content" autocomplete="off" placeholder="控制在80个汉字，160个字符以内" class="layui-input" value="">
+                                <input type="text" name="content" autocomplete="off" placeholder="Welcome" class="layui-input" value="">
                             </div>
                         </div>
                         
@@ -47,7 +79,7 @@
                                 <span class='x-red'>*</span>邮件每行字数
                             </label>
                             <div class="layui-input-block">
-                                <input type="text" name="line" autocomplete="off" placeholder="控制在80个汉字，160个字符以内" class="layui-input" value="">
+                                <input type="text" name="line" autocomplete="off" placeholder="50" class="layui-input" value="">
                             </div>
                         </div>
 
