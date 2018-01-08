@@ -10448,3 +10448,523 @@
   0 => 'xml_file',
 ) ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-08T17:23:23+08:00 ] 127.0.0.1 GET /admin/mailer/admin.html
+[ info ] admin.com/admin/mailer/admin.html [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：1,439.91kb] [文件加载：50]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'mailer',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947,1514950024; pgv_si=s9765649408; PHPSESSID=e0o09773s2u7951hg8fgsko8q3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Mailer->admin[ D:\xampp\htdocs\admin\app\admin\controller\Mailer.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\mailer\admin.html [ array (
+  0 => 'xml_file',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-08T17:29:08+08:00 ] 127.0.0.1 POST /admin/mailer/admin.html
+[ info ] admin.com/admin/mailer/admin.html [运行时间：0.053003s][吞吐率：18.87req/s] [内存消耗：1,955.79kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'mailer',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'content-length' => '122',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://admin.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/mailer/admin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947,1514950024; pgv_si=s9765649408; PHPSESSID=e0o09773s2u7951hg8fgsko8q3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'host' => 'smtp.163.com',
+  'port' => '25',
+  'username' => '123@163.com',
+  'password' => '1234',
+  'outtitle' => 'Hello',
+  'title' => 'Hello',
+  'content' => 'Nice To Meet You',
+  'line' => '15',
+)
+[ info ] [ RUN ] app\admin\controller\Mailer->admin[ D:\xampp\htdocs\admin\app\admin\controller\Mailer.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\mailer\admin.html [ array (
+  0 => 'xml_file',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-08T17:32:20+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] admin.com/admin/index/index.html [运行时间：0.057003s][吞吐率：17.54req/s] [内存消耗：1,807.86kb] [文件加载：53]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947,1514950024; pgv_si=s9765649408; PHPSESSID=e0o09773s2u7951hg8fgsko8q3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\xampp\htdocs\admin\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-08T17:32:20+08:00 ] 127.0.0.1 GET /admin/index/welcome.html
+[ info ] admin.com/admin/index/welcome.html [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：1,745.66kb] [文件加载：52]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947,1514950024; pgv_si=s9765649408; PHPSESSID=e0o09773s2u7951hg8fgsko8q3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\xampp\htdocs\admin\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-08T17:32:39+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] admin.com/admin/index/index.html [运行时间：0.071004s][吞吐率：14.08req/s] [内存消耗：1,955.37kb] [文件加载：55]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947,1514950024; pgv_si=s9765649408; PHPSESSID=e0o09773s2u7951hg8fgsko8q3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\xampp\htdocs\admin\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-08T17:32:39+08:00 ] 127.0.0.1 GET /admin/index/welcome.html
+[ info ] admin.com/admin/index/welcome.html [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：1,745.66kb] [文件加载：52]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947,1514950024; pgv_si=s9765649408; PHPSESSID=e0o09773s2u7951hg8fgsko8q3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\xampp\htdocs\admin\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-08T17:32:40+08:00 ] 127.0.0.1 GET /admin/mailer/index.html
+[ info ] admin.com/admin/mailer/index.html [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：1,598.96kb] [文件加载：52]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'mailer',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947,1514950024; pgv_si=s9765649408; PHPSESSID=e0o09773s2u7951hg8fgsko8q3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Mailer->index[ D:\xampp\htdocs\admin\app\admin\controller\Mailer.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\mailer\index.html [ array (
+  0 => 'xml_file',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-08T17:32:42+08:00 ] 127.0.0.1 POST /admin/mailer/index.html
+[ info ] admin.com/admin/mailer/index.html [运行时间：0.054003s][吞吐率：18.52req/s] [内存消耗：1,984.58kb] [文件加载：54]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'mailer',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'content-length' => '63',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://admin.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/mailer/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947,1514950024; pgv_si=s9765649408; PHPSESSID=e0o09773s2u7951hg8fgsko8q3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'host' => '',
+  'port' => '',
+  'username' => '',
+  'password' => '',
+  'outtitle' => '',
+  'title' => '',
+  'content' => '',
+  'line' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Mailer->index[ D:\xampp\htdocs\admin\app\admin\controller\Mailer.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [2]simplexml_load_file(): I/O warning : failed to load external entity &quot;index_mail.xml&quot;[D:\xampp\htdocs\admin\app\admin\common\Mail.php:75]
+---------------------------------------------------------------
+[ 2018-01-08T17:32:59+08:00 ] 127.0.0.1 GET /admin/mailer/admin.html
+[ info ] admin.com/admin/mailer/admin.html [运行时间：0.036003s][吞吐率：27.78req/s] [内存消耗：1,448.58kb] [文件加载：50]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'mailer',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947,1514950024; pgv_si=s9765649408; PHPSESSID=e0o09773s2u7951hg8fgsko8q3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Mailer->admin[ D:\xampp\htdocs\admin\app\admin\controller\Mailer.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\mailer\admin.html [ array (
+  0 => 'xml_file',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-08T17:33:00+08:00 ] 127.0.0.1 POST /admin/mailer/admin.html
+[ info ] admin.com/admin/mailer/admin.html [运行时间：0.043002s][吞吐率：23.25req/s] [内存消耗：1,960.27kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'mailer',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'content-length' => '122',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://admin.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/mailer/admin.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947,1514950024; pgv_si=s9765649408; PHPSESSID=e0o09773s2u7951hg8fgsko8q3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'host' => 'smtp.163.com',
+  'port' => '25',
+  'username' => '123@163.com',
+  'password' => '1234',
+  'outtitle' => 'Hello',
+  'title' => 'Hello',
+  'content' => 'Nice To Meet You',
+  'line' => '15',
+)
+[ info ] [ RUN ] app\admin\controller\Mailer->admin[ D:\xampp\htdocs\admin\app\admin\controller\Mailer.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\mailer\admin.html [ array (
+  0 => 'xml_file',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-08T17:34:08+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] admin.com/admin/index/index.html [运行时间：0.041003s][吞吐率：24.39req/s] [内存消耗：1,807.86kb] [文件加载：53]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947,1514950024; pgv_si=s9765649408; PHPSESSID=e0o09773s2u7951hg8fgsko8q3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\xampp\htdocs\admin\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-08T17:34:08+08:00 ] 127.0.0.1 GET /admin/index/welcome.html
+[ info ] admin.com/admin/index/welcome.html [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：1,745.66kb] [文件加载：52]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947,1514950024; pgv_si=s9765649408; PHPSESSID=e0o09773s2u7951hg8fgsko8q3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\xampp\htdocs\admin\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-08T17:34:10+08:00 ] 127.0.0.1 GET /admin/mailer/index.html
+[ info ] admin.com/admin/mailer/index.html [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：1,448.54kb] [文件加载：50]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'mailer',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947,1514950024; pgv_si=s9765649408; PHPSESSID=e0o09773s2u7951hg8fgsko8q3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Mailer->index[ D:\xampp\htdocs\admin\app\admin\controller\Mailer.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\mailer\index.html [ array (
+  0 => 'xml_file',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-08T17:34:11+08:00 ] 127.0.0.1 POST /admin/mailer/index.html
+[ info ] admin.com/admin/mailer/index.html [运行时间：0.048003s][吞吐率：20.83req/s] [内存消耗：1,959.95kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'mailer',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'content-length' => '63',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://admin.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/mailer/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947,1514950024; pgv_si=s9765649408; PHPSESSID=e0o09773s2u7951hg8fgsko8q3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'host' => '',
+  'port' => '',
+  'username' => '',
+  'password' => '',
+  'outtitle' => '',
+  'title' => '',
+  'content' => '',
+  'line' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Mailer->index[ D:\xampp\htdocs\admin\app\admin\controller\Mailer.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\mailer\index.html [ array (
+  0 => 'xml_file',
+) ]
+[ info ] [ LOG ] INIT File

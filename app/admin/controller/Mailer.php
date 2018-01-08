@@ -13,7 +13,7 @@ class Mailer extends Mail
             $this->init();
             
             $this->content();
-            $this->setXml();
+            $this->setAdminXml();
 //             $this->replay();
 //             if ($this->send()){
 //                 $this->success('success');
@@ -24,23 +24,52 @@ class Mailer extends Mail
         
         if (file_exists('admin_mail.xml')){
             $xml_file = simplexml_load_file('admin_mail.xml');
-            $xml_file = json_decode(json_encode($xml_file), TRUE);
+            $xml_file = json_decode(json_encode($xml_file), true);
         }else {
             //data init
-            $xml_file = [
-                'host'     => '',
-                'port'     => '',
-                'username' => '',
-                'password' => '',
-                'outtitle' => '',
-                'title'    => '',
-                'content'  => '',
-                'line'     => '',
-            ];
+            $xml_file = $this->xmlInit();
         }
         
         $this->view->assign('xml_file', $xml_file);
         
         return $this->view->fetch();
+    }
+    
+    public function index()
+    {
+        if (request()->isPost()){
+        
+            $this->getParam();
+            $this->init();
+        
+            $this->content();
+            $this->setIndexXml();
+        }
+        
+        if (file_exists('index_mail.xml')){
+            $xml_file = simplexml_load_file('index_mail.xml');
+            $xml_file = json_decode(json_encode($xml_file), true);
+        }else {
+            //data init
+            $xml_file = $this->xmlInit();
+        }
+        
+        $this->view->assign('xml_file', $xml_file);
+        
+        return $this->view->fetch();
+    }
+    
+    public function xmlInit()
+    {
+        return [
+            'host'     => '',
+            'port'     => '',
+            'username' => '',
+            'password' => '',
+            'outtitle' => '',
+            'title'    => '',
+            'content'  => '',
+            'line'     => '',
+        ];
     }
 }

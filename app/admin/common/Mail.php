@@ -29,15 +29,15 @@ class Mail extends Controller
      * XML init
      * admin_xml配置文件写入
      */
-    protected function setXml()
+    protected function setAdminXml()
     {
         //文件处理
         if (!file_exists('admin_mail.xml')){
             
-            $xml_prepare = '<?xml version="1.0" encoding="UTF-8"?><admin></admin>';
-            $file_return = file_put_contents('admin_mail.xml', $xml_prepare);
+            $xml_admin_prepare = '<?xml version="1.0" encoding="UTF-8"?><admin></admin>';
+            $file_admin_return = file_put_contents('admin_mail.xml', $xml_admin_prepare);
             
-            if (!$file_return) $this->error('XML write error.');
+            if (!$file_admin_return) $this->error('XML admin write error.');
         }
         
         $xml = simplexml_load_file('admin_mail.xml');
@@ -54,6 +54,37 @@ class Mail extends Controller
         
         $xml->asXML('admin_mail.xml');
         
+    }
+    
+    
+    /**
+     * XML init
+     * index_xml配置文件写入
+     */
+    protected function setIndexXml()
+    {
+        //文件处理
+        if (!file_exists('index_mail.xml')){
+        
+            $xml_index_prepare = '<?xml version="1.0" encoding="UTF-8"?><index></index>';
+            $file_index_return = file_put_contents('index_mail.xml', $xml_index_prepare);
+            
+            if (!$file_index_return) $this->error('XML index write error.');
+        }
+        
+        $xml = simplexml_load_file('index_mail.xml');
+        
+        //写入XML
+        $xml->host     = $this->mail->Host;
+        $xml->port     = $this->mail->Port;
+        $xml->username = $this->mail->Username;
+        $xml->password = $this->mail->Password;
+        $xml->outtitle = $this->mail->FromName;
+        $xml->title    = $this->mail->Subject;
+        $xml->content  = $this->mail->Body;
+        $xml->line     = $this->mail->WordWrap;
+        
+        $xml->asXML('index_mail.xml');
     }
     
     /**

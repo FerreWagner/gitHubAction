@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:63:"D:\xampp\htdocs\admin\public/../app/admin\view\index\index.html";i:1515144575;s:55:"D:\xampp\htdocs\admin\app\admin\view\public\header.html";i:1515122580;s:58:"D:\xampp\htdocs\admin\app\admin\view\public\left-menu.html";i:1515144629;s:56:"D:\xampp\htdocs\admin\app\admin\view\public\base_js.html";i:1515144677;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:63:"D:\xampp\htdocs\admin\public/../app/admin\view\index\index.html";i:1515144575;s:55:"D:\xampp\htdocs\admin\app\admin\view\public\header.html";i:1515122580;s:58:"D:\xampp\htdocs\admin\app\admin\view\public\left-menu.html";i:1515403956;s:56:"D:\xampp\htdocs\admin\app\admin\view\public\base_js.html";i:1515144677;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -145,7 +145,7 @@
                         </a>
                     </dd>
                     <dd class="">
-                        <a href="javascript:;" _href="<?php echo url('mailer/admin'); ?>"> <!-- 二次开发请自行配置 TODO -->
+                        <a href="javascript:;" _href="<?php echo url('mailer/index'); ?>"> <!-- 二次开发请自行配置 TODO -->
                             <cite>用户邮件设置</cite>
                         </a>
                     </dd>
