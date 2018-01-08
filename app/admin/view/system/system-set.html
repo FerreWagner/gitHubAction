@@ -54,23 +54,41 @@
                         </div>
 
 
-                                <div class="layui-form-item">
-                                    <label for="AppId" class="layui-form-label">
-                                        <span class="x-red">*</span>是否开启
-                                    </label>
-                                    <div class="layui-input-block">
-                                        <select name="is_close">
-                                            {eq name="$system->is_close" value="0"}
-                                            <option value="0" selected>开启网站</option>
-                                            <option value="1">关闭网站</option>
-                                            {else /}
-                                            <option value="0" >开启网站</option>
-                                            <option value="1" selected>关闭网站</option>
-                                            {/eq}
+                        <div class="layui-form-item">
+                            <label for="AppId" class="layui-form-label">
+                                <span class="x-red">*</span>是否开启
+                            </label>
+                            <div class="layui-input-block">
+                                <select name="is_close">
+                                    {eq name="$system->is_close" value="0"}
+                                    <option value="0" selected>开启网站</option>
+                                    <option value="1">关闭网站</option>
+                                    {else /}
+                                    <option value="0" >开启网站</option>
+                                    <option value="1" selected>关闭网站</option>
+                                    {/eq}
 
-                                        </select>
-                                    </div>
-                        </div>
+                                </select>
+                            </div>
+                		</div>
+                		
+                       	<div class="layui-form-item">
+                            <label for="AppId" class="layui-form-label">
+                                <span class="x-red">*</span>邮件服务
+                            </label>
+                            <div class="layui-input-block">
+                                <select name="is_mail">
+                                    {eq name="$system->is_mail" value="0"}
+                                    <option value="0" selected>开启邮件</option>
+                                    <option value="1">关闭邮件</option>
+                                    {else /}
+                                    <option value="0" >开启邮件</option>
+                                    <option value="1" selected>关闭邮件</option>
+                                    {/eq}
+
+                                </select>
+                            </div>
+                		</div>
 
                 		<!--用隐藏域发送is_update字段值-->
                         <input type="hidden" name="is_update" value="{$system->is_update}">
