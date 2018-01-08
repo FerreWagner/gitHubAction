@@ -1,0 +1,228 @@
+---------------------------------------------------------------
+[ 2017-12-29T11:50:35+08:00 ] 127.0.0.1 GET /admin
+[ info ] admin.com/admin [运行时间：0.264015s][吞吐率：3.79req/s] [内存消耗：1,477.13kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-29T11:50:36+08:00 ] 127.0.0.1 GET /admin/login/index.html
+[ info ] admin.com/admin/login/index.html [运行时间：0.065003s][吞吐率：15.38req/s] [内存消耗：1,483.07kb] [文件加载：41]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947; PHPSESSID=89bkcou8g84nllcaamppvs05o3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\xampp\htdocs\admin\app\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-29T11:50:36+08:00 ] 127.0.0.1 GET /logo.png
+[ info ] admin.com/logo.png [运行时间：0.057004s][吞吐率：17.54req/s] [内存消耗：1,137.48kb] [文件加载：32]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'logo.png',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947; PHPSESSID=89bkcou8g84nllcaamppvs05o3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-29T11:50:40+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] admin.com/admin/login/login.html [运行时间：0.649037s][吞吐率：1.54req/s] [内存消耗：2,658.53kb] [文件加载：48]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'content-length' => '73',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://admin.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947; PHPSESSID=89bkcou8g84nllcaamppvs05o3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'ferre',
+  'password' => 'wh1234',
+  '__token__' => 'f8ff63071192c1a92fac15f3cf651799',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ D:\xampp\htdocs\admin\app\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=alexa_admin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_admin` [ RunTime:0.077005s ]
+[ sql ] [ SQL ] SELECT * FROM `alexa_admin` WHERE  `username` = 'ferre' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_alog` [ RunTime:0.060003s ]
+[ sql ] [ SQL ] INSERT INTO `alexa_alog` (`type` , `name` , `ip` , `time`) VALUES (1 , 'ferre' , '127.0.0.1' , 1514519440) [ RunTime:0.045002s ]
+[ sql ] [ SQL ] UPDATE `alexa_admin`  SET `count`=`count`+1  WHERE  `username` = 'ferre' [ RunTime:0.050003s ]
+[ sql ] [ SQL ] UPDATE `alexa_admin`  SET `update_time`=1514519440  WHERE  `username` = 'ferre' [ RunTime:0.028001s ]
+---------------------------------------------------------------
+[ 2017-12-29T11:50:40+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] admin.com/admin/index/index.html [运行时间：0.149008s][吞吐率：6.71req/s] [内存消耗：1,796.00kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947; PHPSESSID=89bkcou8g84nllcaamppvs05o3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\xampp\htdocs\admin\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-29T11:50:40+08:00 ] 127.0.0.1 GET /admin/index/welcome.html
+[ info ] admin.com/admin/index/welcome.html [运行时间：0.062004s][吞吐率：16.13req/s] [内存消耗：1,734.09kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; __utma=263463772.1819282850.1514165882.1514165882.1514165882.1; __utmz=263463772.1514165882.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1513926799,1514169947; PHPSESSID=89bkcou8g84nllcaamppvs05o3; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\xampp\htdocs\admin\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File

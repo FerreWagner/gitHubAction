@@ -1,0 +1,1722 @@
+---------------------------------------------------------------
+[ 2017-12-15T10:58:36+08:00 ] 127.0.0.1 GET /
+[ info ] admin.com/ [运行时间：0.075004s][吞吐率：13.33req/s] [内存消耗：1,117.77kb] [文件加载：30]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\admin\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T10:58:46+08:00 ] 127.0.0.1 GET /saddsa
+[ info ] admin.com/saddsa [运行时间：0.039001s][吞吐率：25.64req/s] [内存消耗：1,136.84kb] [文件加载：32]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'saddsa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T10:59:29+08:00 ] 127.0.0.1 GET /saddsa
+[ info ] admin.com/saddsa [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：1,136.93kb] [文件加载：32]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'saddsa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T10:59:34+08:00 ] 127.0.0.1 GET /
+[ info ] admin.com/ [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,117.45kb] [文件加载：30]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\admin\app\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T11:01:24+08:00 ] 127.0.0.1 GET /
+[ info ] admin.com/ [运行时间：0.029001s][吞吐率：34.48req/s] [内存消耗：1,117.73kb] [文件加载：30]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\admin\app\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T11:01:29+08:00 ] 127.0.0.1 GET /admin
+[ info ] admin.com/admin [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：1,617.74kb] [文件加载：44]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T11:01:30+08:00 ] 127.0.0.1 GET /admin/login/index.html
+[ info ] admin.com/admin/login/index.html [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,624.02kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\xampp\htdocs\admin\app\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T11:01:31+08:00 ] 127.0.0.1 GET /logo.png
+[ info ] admin.com/logo.png [运行时间：0.020002s][吞吐率：50.00req/s] [内存消耗：1,136.76kb] [文件加载：32]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'logo.png',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T11:01:36+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] admin.com/admin/login/login.html [运行时间：0.051003s][吞吐率：19.61req/s] [内存消耗：2,140.26kb] [文件加载：49]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'content-length' => '26',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://admin.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'grtt',
+  'password' => '123',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ D:\xampp\htdocs\admin\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[D:\xampp\htdocs\admin\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2017-12-15T11:01:38+08:00 ] 127.0.0.1 GET /admin/login/index.html
+[ info ] admin.com/admin/login/index.html [运行时间：0.040002s][吞吐率：25.00req/s] [内存消耗：1,480.76kb] [文件加载：41]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\xampp\htdocs\admin\app\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T11:03:50+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] admin.com/admin/login/login.html [运行时间：0.102005s][吞吐率：9.80req/s] [内存消耗：2,147.16kb] [文件加载：49]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'content-length' => '30',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://admin.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'ferre',
+  'password' => 'wh1234',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ D:\xampp\htdocs\admin\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'alexa.admin' doesn't exist[D:\xampp\htdocs\admin\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2017-12-15T11:04:22+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] admin.com/admin/login/login.html [运行时间：0.242014s][吞吐率：4.13req/s] [内存消耗：2,170.23kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'content-length' => '30',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://admin.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'ferre',
+  'password' => 'wh1234',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ D:\xampp\htdocs\admin\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_admin` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `alexa_admin` WHERE  `username` = 'ferre' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_alog` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `alexa_alog` (`type` , `name` , `ip` , `time`) VALUES (1 , 'ferre' , '127.0.0.1' , 1513307062) [ RunTime:0.062004s ]
+[ sql ] [ SQL ] UPDATE `alexa_admin`  SET `count`=`count`+1  WHERE  `username` = 'ferre' [ RunTime:0.109006s ]
+[ sql ] [ SQL ] UPDATE `alexa_admin`  SET `lasttime`='2017-12-15 11:04:22'  WHERE  `username` = 'ferre' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:04:22+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] admin.com/admin/index/index.html [运行时间：0.053003s][吞吐率：18.87req/s] [内存消耗：1,621.19kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\xampp\htdocs\admin\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T11:04:22+08:00 ] 127.0.0.1 GET /admin/index/welcome.html
+[ info ] admin.com/admin/index/welcome.html [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,563.26kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\xampp\htdocs\admin\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T11:04:25+08:00 ] 127.0.0.1 GET /admin/article/index.html
+[ info ] admin.com/admin/article/index.html [运行时间：0.086005s][吞吐率：11.63req/s] [内存消耗：2,513.38kb] [文件加载：52]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ D:\xampp\htdocs\admin\app\admin\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\article\article-list.html [ array (
+  0 => 'article',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_article` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `alexa_article` `a` INNER JOIN `alexa_category` `b` ON `a`.`cate`=`b`.`id` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`catename` FROM `alexa_article` `a` INNER JOIN `alexa_category` `b` ON `a`.`cate`=`b`.`id` ORDER BY a.id desc LIMIT 0,6 [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:04:28+08:00 ] 127.0.0.1 GET /admin/category/index.html
+[ info ] admin.com/admin/category/index.html [运行时间：0.080005s][吞吐率：12.50req/s] [内存消耗：2,683.82kb] [文件加载：50]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Category->index[ D:\xampp\htdocs\admin\app\admin\controller\Category.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\category\category-list.html [ array (
+  0 => 'cate',
+  1 => 'cate_count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_category` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `alexa_category` ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `alexa_category` LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:04:32+08:00 ] 127.0.0.1 POST /admin/category/index.html
+[ info ] admin.com/admin/category/index.html [运行时间：0.077004s][吞吐率：12.99req/s] [内存消耗：2,644.86kb] [文件加载：50]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'content-length' => '15',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://admin.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/category/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'catename' => '',
+  'sort' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Category->index[ D:\xampp\htdocs\admin\app\admin\controller\Category.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_category` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `alexa_category` ORDER BY sort desc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `alexa_category` LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:04:34+08:00 ] 127.0.0.1 GET /admin/category/index.html
+[ info ] admin.com/admin/category/index.html [运行时间：0.069002s][吞吐率：14.49req/s] [内存消耗：2,528.61kb] [文件加载：48]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Category->index[ D:\xampp\htdocs\admin\app\admin\controller\Category.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\category\category-list.html [ array (
+  0 => 'cate',
+  1 => 'cate_count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_category` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `alexa_category` ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `alexa_category` LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:04:36+08:00 ] 127.0.0.1 GET /admin/feedback/index.html
+[ info ] admin.com/admin/feedback/index.html [运行时间：0.065004s][吞吐率：15.38req/s] [内存消耗：2,764.13kb] [文件加载：53]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'feedback',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Feedback->index[ D:\xampp\htdocs\admin\app\admin\controller\Feedback.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\feedback\feedback-list.html [ array (
+  0 => 'feed_lst',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_feedback` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `alexa_feedback` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `alexa_feedback` LIMIT 0,6 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:04:54+08:00 ] 127.0.0.1 GET /admin/article/add.html
+[ info ] admin.com/admin/article/add.html [运行时间：0.067004s][吞吐率：14.92req/s] [内存消耗：2,338.57kb] [文件加载：48]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/article/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->add[ D:\xampp\htdocs\admin\app\admin\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\article\article-add.html [ array (
+  0 => 'cate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_category` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`catename` FROM `alexa_category` ORDER BY `sort`  asc [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:05:28+08:00 ] 127.0.0.1 POST /admin/article/add.html
+[ info ] admin.com/admin/article/add.html [运行时间：0.056003s][吞吐率：17.86req/s] [内存消耗：2,642.88kb] [文件加载：50]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'content-length' => '39958',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://admin.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryPLVVABLbamC20Ecj',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/article/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'Alexa213321',
+  'author' => 'Ferre',
+  'order' => '6',
+  'keywords' => 'Alexa,Ferre',
+  'desc' => 'About Alexa',
+  'see' => '12',
+  'content' => '',
+  'cate' => '5',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->add[ D:\xampp\htdocs\admin\app\admin\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_article` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `alexa_article` WHERE  `title` = 'Alexa213321' LIMIT 1 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:05:29+08:00 ] 127.0.0.1 GET /admin/article/add.html
+[ info ] admin.com/admin/article/add.html [运行时间：0.081004s][吞吐率：12.35req/s] [内存消耗：2,188.34kb] [文件加载：46]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/article/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->add[ D:\xampp\htdocs\admin\app\admin\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\article\article-add.html [ array (
+  0 => 'cate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_category` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`catename` FROM `alexa_category` ORDER BY `sort`  asc [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:05:47+08:00 ] 127.0.0.1 POST /admin/article/add.html
+[ info ] admin.com/admin/article/add.html [运行时间：0.266015s][吞吐率：3.76req/s] [内存消耗：2,766.10kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'content-length' => '39973',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://admin.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryanizbwM4wyXdwpyD',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/article/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'Alexa321123',
+  'author' => 'Ferre',
+  'order' => '6',
+  'keywords' => 'Alexa,Ferre',
+  'desc' => 'About Alexa',
+  'see' => '12',
+  'content' => '<p>123<br/></p>',
+  'cate' => '5',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->add[ D:\xampp\htdocs\admin\app\admin\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `alexa_article` WHERE  `title` = 'Alexa321123' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `alexa_article` (`title` , `author` , `order` , `keywords` , `desc` , `see` , `content` , `cate` , `time` , `thumb` , `pic`) VALUES ('Alexa321123' , 'Ferre' , 6 , 'Alexa,Ferre' , 'About Alexa' , 12 , '<p>123<br/></p>' , '5' , 1513307147 , '/uploads/thumb/alexa15133071474b84b15bff6ee5796152495a230e45e3d7e947d9.jpg' , '/uploads/20171215\\9ad3db0c5ae4e2b236f455ec9289124c.jpg') [ RunTime:0.103006s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:05:47+08:00 ] 127.0.0.1 GET /admin/article/index.html
+[ info ] admin.com/admin/article/index.html [运行时间：0.066004s][吞吐率：15.15req/s] [内存消耗：2,345.65kb] [文件加载：50]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/article/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ D:\xampp\htdocs\admin\app\admin\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\article\article-list.html [ array (
+  0 => 'article',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_article` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `alexa_article` `a` INNER JOIN `alexa_category` `b` ON `a`.`cate`=`b`.`id` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`catename` FROM `alexa_article` `a` INNER JOIN `alexa_category` `b` ON `a`.`cate`=`b`.`id` ORDER BY a.id desc LIMIT 0,6 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:05:49+08:00 ] 127.0.0.1 GET /admin/article/edit/id/11.html
+[ info ] admin.com/admin/article/edit/id/11.html [运行时间：0.051003s][吞吐率：19.61req/s] [内存消耗：2,293.73kb] [文件加载：47]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/article/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '11',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->edit[ D:\xampp\htdocs\admin\app\admin\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\article\article-edit.html [ array (
+  0 => 'cate',
+  1 => 'article',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_category` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `id`,`catename` FROM `alexa_category` ORDER BY `sort`  asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `alexa_article` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:05:53+08:00 ] 127.0.0.1 GET /admin/article/index.html
+[ info ] admin.com/admin/article/index.html [运行时间：0.051002s][吞吐率：19.61req/s] [内存消耗：2,345.46kb] [文件加载：50]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/article/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ D:\xampp\htdocs\admin\app\admin\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\article\article-list.html [ array (
+  0 => 'article',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_article` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `alexa_article` `a` INNER JOIN `alexa_category` `b` ON `a`.`cate`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`catename` FROM `alexa_article` `a` INNER JOIN `alexa_category` `b` ON `a`.`cate`=`b`.`id` ORDER BY a.id desc LIMIT 0,6 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:07:37+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] admin.com/admin/index/index.html [运行时间：0.040002s][吞吐率：25.00req/s] [内存消耗：1,619.55kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\xampp\htdocs\admin\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T11:07:37+08:00 ] 127.0.0.1 GET /admin/index/welcome.html
+[ info ] admin.com/admin/index/welcome.html [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,410.48kb] [文件加载：40]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\xampp\htdocs\admin\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T11:07:55+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] admin.com/admin/index/index.html [运行时间：0.049003s][吞吐率：20.41req/s] [内存消耗：1,619.28kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\xampp\htdocs\admin\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T11:07:55+08:00 ] 127.0.0.1 GET /admin/index/welcome.html
+[ info ] admin.com/admin/index/welcome.html [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,410.48kb] [文件加载：40]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\xampp\htdocs\admin\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-12-15T11:07:58+08:00 ] 127.0.0.1 GET /admin/system/linklist.html
+[ info ] admin.com/admin/system/linklist.html [运行时间：0.077004s][吞吐率：12.99req/s] [内存消耗：2,663.58kb] [文件加载：50]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'linklist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\System->linkList[ D:\xampp\htdocs\admin\app\admin\controller\System.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\system\sys-link.html [ array (
+  0 => 'link_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_link` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `alexa_link` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:08:06+08:00 ] 127.0.0.1 POST /admin/system/linklist.html
+[ info ] admin.com/admin/system/linklist.html [运行时间：0.153009s][吞吐率：6.54req/s] [内存消耗：2,652.23kb] [文件加载：48]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'linklist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'content-length' => '22',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://admin.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/system/linklist.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'name' => '213',
+  'url' => 'asf',
+  'sort' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\System->linkList[ D:\xampp\htdocs\admin\app\admin\controller\System.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_link` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `alexa_link` WHERE  `name` = '213' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `alexa_link` WHERE  `url` = 'asf' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `alexa_link` (`name` , `url` , `sort`) VALUES ('213' , 'asf' , '') [ RunTime:0.077004s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:08:06+08:00 ] 127.0.0.1 GET /admin/system/linklist.html
+[ info ] admin.com/admin/system/linklist.html [运行时间：0.054003s][吞吐率：18.52req/s] [内存消耗：2,514.17kb] [文件加载：48]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'linklist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/system/linklist.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\System->linkList[ D:\xampp\htdocs\admin\app\admin\controller\System.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\system\sys-link.html [ array (
+  0 => 'link_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_link` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `alexa_link` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:09:22+08:00 ] 127.0.0.1 GET /admin/admin/index.html
+[ info ] admin.com/admin/admin/index.html [运行时间：0.066003s][吞吐率：15.15req/s] [内存消耗：2,254.63kb] [文件加载：47]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Admin->index[ D:\xampp\htdocs\admin\app\admin\controller\Admin.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\admin\admin_list.html [ array (
+  0 => 'ferre',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_admin` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `alexa_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:09:23+08:00 ] 127.0.0.1 GET /admin/admin/loglist.html
+[ info ] admin.com/admin/admin/loglist.html [运行时间：0.072004s][吞吐率：13.89req/s] [内存消耗：2,393.05kb] [文件加载：50]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'loglist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Admin->logList[ D:\xampp\htdocs\admin\app\admin\controller\Admin.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\admin\admin-log.html [ array (
+  0 => 'alog',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_alog` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `alexa_alog` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `alexa_alog` LIMIT 0,8 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:09:27+08:00 ] 127.0.0.1 GET /admin/category/index.html
+[ info ] admin.com/admin/category/index.html [运行时间：0.081005s][吞吐率：12.34req/s] [内存消耗：2,528.61kb] [文件加载：48]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Category->index[ D:\xampp\htdocs\admin\app\admin\controller\Category.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\category\category-list.html [ array (
+  0 => 'cate',
+  1 => 'cate_count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_category` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `alexa_category` ORDER BY sort desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `alexa_category` LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:09:33+08:00 ] 127.0.0.1 GET /admin/article/index.html
+[ info ] admin.com/admin/article/index.html [运行时间：0.070004s][吞吐率：14.28req/s] [内存消耗：2,331.60kb] [文件加载：49]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ D:\xampp\htdocs\admin\app\admin\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\article\article-list.html [ array (
+  0 => 'article',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `alexa_article` `a` INNER JOIN `alexa_category` `b` ON `a`.`cate`=`b`.`id` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`catename` FROM `alexa_article` `a` INNER JOIN `alexa_category` `b` ON `a`.`cate`=`b`.`id` ORDER BY a.id desc LIMIT 0,6 [ RunTime:0.003001s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:09:36+08:00 ] 127.0.0.1 GET /admin/article/edit/id/11.html
+[ info ] admin.com/admin/article/edit/id/11.html [运行时间：0.072004s][吞吐率：13.89req/s] [内存消耗：2,142.05kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/article/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '11',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->edit[ D:\xampp\htdocs\admin\app\admin\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\article\article-edit.html [ array (
+  0 => 'cate',
+  1 => 'article',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_category` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`catename` FROM `alexa_category` ORDER BY `sort`  asc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_article` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `alexa_article` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:09:54+08:00 ] 127.0.0.1 POST /admin/article/edit/id/11.html
+[ info ] admin.com/admin/article/edit/id/11.html [运行时间：0.132007s][吞吐率：7.58req/s] [内存消耗：2,774.18kb] [文件加载：53]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'content-length' => '1114',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://admin.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarycASGAeBP994FiRxj',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/article/edit/id/11.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'Alexa321123',
+  'author' => 'Ferre',
+  'order' => '6',
+  'keywords' => 'Alexa,Ferre',
+  'desc' => 'About Alexa',
+  'see' => '12',
+  'content' => '<p><img src="/ueditor/php/upload/image/20171215/1513307391979403.jpg" title="1513307391979403.jpg" alt="QQ图片20170515132742.jpg"/>123<br/></p>',
+  'cate' => '5',
+  'id' => '11',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->edit[ D:\xampp\htdocs\admin\app\admin\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `alexa_article` WHERE  `title` = 'Alexa321123'  AND `id` <> 11 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `alexa_article`  SET `title`='Alexa321123',`author`='Ferre',`order`=6,`keywords`='Alexa,Ferre',`desc`='About Alexa',`see`=12,`content`='<p><img src=\"/ueditor/php/upload/image/20171215/1513307391979403.jpg\" title=\"1513307391979403.jpg\" alt=\"QQ图片20170515132742.jpg\"/>123<br/></p>',`cate`='5'  WHERE  `id` = 11 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:09:56+08:00 ] 127.0.0.1 GET /admin/article/index.html
+[ info ] admin.com/admin/article/index.html [运行时间：0.074003s][吞吐率：13.51req/s] [内存消耗：2,331.62kb] [文件加载：49]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/article/edit/id/11.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ D:\xampp\htdocs\admin\app\admin\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\article\article-list.html [ array (
+  0 => 'article',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_article` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `alexa_article` `a` INNER JOIN `alexa_category` `b` ON `a`.`cate`=`b`.`id` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`catename` FROM `alexa_article` `a` INNER JOIN `alexa_category` `b` ON `a`.`cate`=`b`.`id` ORDER BY a.id desc LIMIT 0,6 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:09:57+08:00 ] 127.0.0.1 GET /admin/article/edit/id/11.html
+[ info ] admin.com/admin/article/edit/id/11.html [运行时间：0.058003s][吞吐率：17.24req/s] [内存消耗：2,142.45kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/article/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '11',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->edit[ D:\xampp\htdocs\admin\app\admin\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\article\article-edit.html [ array (
+  0 => 'cate',
+  1 => 'article',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_category` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,`catename` FROM `alexa_category` ORDER BY `sort`  asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `alexa_article` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2017-12-15T11:09:59+08:00 ] 127.0.0.1 GET /admin/article/index.html
+[ info ] admin.com/admin/article/index.html [运行时间：0.069004s][吞吐率：14.49req/s] [内存消耗：2,331.62kb] [文件加载：49]
+[ info ] [ LANG ] D:\xampp\htdocs\admin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'admin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://admin.com/admin/article/edit/id/11.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=493484032; pgv_si=s7870728192; PHPSESSID=cagjp6dm2dfp1g7pfdt82pm0p2; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ D:\xampp\htdocs\admin\app\admin\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\xampp\htdocs\admin\public/../app/admin\view\article\article-list.html [ array (
+  0 => 'article',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=alexa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `alexa_article` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `alexa_article` `a` INNER JOIN `alexa_category` `b` ON `a`.`cate`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`catename` FROM `alexa_article` `a` INNER JOIN `alexa_category` `b` ON `a`.`cate`=`b`.`id` ORDER BY a.id desc LIMIT 0,6 [ RunTime:0.003000s ]
