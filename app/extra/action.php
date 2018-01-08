@@ -10,4 +10,5 @@ return [
     'System/linklist',
     'System/linkdelete',
     'System/linkedit',
+    'Mailer/admin',
 ];

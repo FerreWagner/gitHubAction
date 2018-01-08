@@ -22,18 +22,24 @@ class Mailer extends Mail
 //             }
         }
         
+        if (file_exists('admin_mail.xml')){
+            $xml_file = simplexml_load_file('admin_mail.xml');
+            $xml_file = json_decode(json_encode($xml_file), TRUE);
+        }else {
+            //data init
+            $xml_file = [
+                'host'     => '',
+                'port'     => '',
+                'username' => '',
+                'password' => '',
+                'outtitle' => '',
+                'title'    => '',
+                'content'  => '',
+                'line'     => '',
+            ];
+        }
         
-        $this->view->assign([
-            'host'     => $this->host,
-            'port'     => $this->port,
-            'username' => $this->username,
-            'password' => $this->password,
-            'outtitle' => $this->outtitle,
-            'title'    => $this->title,
-            'content'  => $this->content,
-            'line'     => $this->line,
-            
-        ]);
+        $this->view->assign('xml_file', $xml_file);
         
         return $this->view->fetch();
     }

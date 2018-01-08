@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:64:"D:\xampp\htdocs\admin\public/../app/admin\view\mailer\admin.html";i:1515400116;s:55:"D:\xampp\htdocs\admin\app\admin\view\public\header.html";i:1515122580;s:56:"D:\xampp\htdocs\admin\app\admin\view\public\base_js.html";i:1515144677;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:64:"D:\xampp\htdocs\admin\public/../app/admin\view\mailer\admin.html";i:1515402249;s:55:"D:\xampp\htdocs\admin\app\admin\view\public\header.html";i:1515122580;s:56:"D:\xampp\htdocs\admin\app\admin\view\public\base_js.html";i:1515144677;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,7 +29,6 @@
             <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
               <ul class="layui-tab-title">
                 <li class="layui-this">后台root用户邮箱设置(Tips:每项必填)</li>
-
               </ul>
               <div class="layui-tab-content" >
                 <div class="layui-tab-item layui-show">
@@ -39,7 +38,7 @@
                                 <span class='x-red'>*</span>邮箱主机
                             </label>
                             <div class="layui-input-block">
-                                <input type="text" name="host" autocomplete="off" placeholder="smtp.gmail.com" class="layui-input" value="<?php echo $host; ?>">
+                                <input type="text" name="host" autocomplete="off" placeholder="smtp.gmail.com" class="layui-input" value="<?php echo $xml_file['host']; ?>">
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -47,7 +46,7 @@
                                 <span class='x-red'>*</span>端口号
                             </label>
                             <div class="layui-input-block">
-                                <input type="text" name="port" autocomplete="off" placeholder="25" class="layui-input" value="<?php echo $port; ?>">
+                                <input type="text" name="port" autocomplete="off" placeholder="25" class="layui-input" value="<?php echo $xml_file['port']; ?>">
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -55,7 +54,7 @@
                                 <span class='x-red'>*</span>用户名
                             </label>
                             <div class="layui-input-block">
-                                <input type="text" name="username" autocomplete="off" placeholder="xxx@gmail.com" class="layui-input" value="<?php echo $username; ?>">
+                                <input type="text" name="username" autocomplete="off" placeholder="xxx@gmail.com" class="layui-input" value="<?php echo $xml_file['username']; ?>">
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -63,7 +62,7 @@
                                 <span class='x-red'>*</span>密码
                             </label>
                             <div class="layui-input-block">
-                                <input type="text" name="password" autocomplete="off" placeholder="******" class="layui-input" value="<?php echo $password; ?>">
+                                <input type="text" name="password" autocomplete="off" placeholder="******" class="layui-input" value="<?php echo $xml_file['password']; ?>">
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -71,7 +70,7 @@
                                 <span class='x-red'>*</span>外部标题
                             </label>
                             <div class="layui-input-block">
-                                <input type="text" name="outtitle" autocomplete="off" placeholder="您好我是Ferre,欢迎注册Alexa_Admin后台" class="layui-input" value="<?php echo $outtitle; ?>">
+                                <input type="text" name="outtitle" autocomplete="off" placeholder="您好我是Ferre,欢迎注册Alexa_Admin后台" class="layui-input" value="<?php echo $xml_file['outtitle']; ?>">
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -79,7 +78,7 @@
                                 <span class='x-red'>*</span>邮件标题
                             </label>
                             <div class="layui-input-block">
-                                <input type="text" name="title" autocomplete="off" placeholder="您好我是Ferre,欢迎注册Alexa_Admin后台" class="layui-input" value="<?php echo $title; ?>">
+                                <input type="text" name="title" autocomplete="off" placeholder="您好我是Ferre,欢迎注册Alexa_Admin后台" class="layui-input" value="<?php echo $xml_file['title']; ?>">
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -87,7 +86,7 @@
                                 <span class='x-red'>*</span>邮件内容
                             </label>
                             <div class="layui-input-block">
-                                <input type="text" name="content" autocomplete="off" placeholder="Welcome" class="layui-input" value="<?php echo $content; ?>">
+                                <input type="text" name="content" autocomplete="off" placeholder="Welcome" class="layui-input" value="<?php echo $xml_file['content']; ?>">
                             </div>
                         </div>
                         
@@ -96,7 +95,7 @@
                                 <span class='x-red'>*</span>邮件每行字数
                             </label>
                             <div class="layui-input-block">
-                                <input type="text" name="line" autocomplete="off" placeholder="50" class="layui-input" value="<?php echo $line; ?>">
+                                <input type="text" name="line" autocomplete="off" placeholder="50" class="layui-input" value="<?php echo $xml_file['line']; ?>">
                             </div>
                         </div>
 
