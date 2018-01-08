@@ -23,6 +23,18 @@ class Mailer extends Mail
         }
         
         
+        $this->view->assign([
+            'host'     => $this->host,
+            'port'     => $this->port,
+            'username' => $this->username,
+            'password' => $this->password,
+            'outtitle' => $this->outtitle,
+            'title'    => $this->title,
+            'content'  => $this->content,
+            'line'     => $this->line,
+            
+        ]);
+        
         return $this->view->fetch();
     }
 }

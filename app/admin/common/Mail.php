@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 class Mail extends Controller
 {
-    #TIPS:QQ有幸需要做代理邮件的开启，且密码自动生成
+    #TIPS:QQ邮箱需要做代理邮件的开启，且密码自动生成
     #TIPS:当调用邮件服务类时,初始化设置为：getParam(); init();content();setXml();后台使用服务时，调用replay和send方法；
     
     
