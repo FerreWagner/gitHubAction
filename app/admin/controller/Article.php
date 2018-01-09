@@ -135,11 +135,16 @@ class Article extends Base
         if (Mail::isMail() == config('mail.close')) return true;
         
         $user_email = session('user_data')['email'];
-        
+//         halt($user_email);
         $mail = new Mail();
-        
+        $mail->getXml('admin');
+        $mail->recive = $user_email;
         $mail->init();
         $mail->content();
-        halt($user_email);
+        $mail->replay();
+        if (!$mail->send()){
+            $this->error('Mail Server Error.');
+        }
+        
     }
 }

@@ -63,14 +63,18 @@ class Mailer extends Mail
     public function xmlInit()
     {
         return [
-            'host'     => '',
-            'port'     => '',
-            'username' => '',
-            'password' => '',
-            'outtitle' => '',
-            'title'    => '',
-            'content'  => '',
-            'line'     => '',
+            'host'            => '',
+            'port'            => '',
+            'username'        => '',
+            'password'        => '',
+            'outtitle'        => '',
+            'title'           => '',
+            'content'         => '',
+            'line'            => '',
+            'recive_name'     => '',
+            'recive_address'  => '',
+            'recive_username' => '',
+            
         ];
     }
     
