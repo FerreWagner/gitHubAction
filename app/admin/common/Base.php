@@ -14,13 +14,15 @@ class Base extends Controller
         $request = Request::instance();
         
         //permission detail
-        if (session('user_data')['role'] == 1 && in_array($request->controller().'/'.$request->action(), config('action'))){
+        if (session('user_data')['role'] == config('role.role_normal') && in_array($request->controller().'/'.$request->action(), config('action'))){
             $this->error('Sorry,You are not allowed to do this.', 'index/welcome');
         }
         
         if ($request->module() == 'admin' && $request->controller() != 'Login'){    //except Login action,all admin function need validate
             $this->isLogin();
         }
+        
+        
         
 
         

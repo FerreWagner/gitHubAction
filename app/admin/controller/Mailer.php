@@ -12,7 +12,9 @@ class Mailer extends Mail
     {
         if ($this->isMail() == config('mail.close')) return $this->view->fetch('close');
         
+        //读取表单/修改配置
         if (request()->isPost()){
+            
             $this->getParam();
             $this->init();
             $this->content();
@@ -20,6 +22,7 @@ class Mailer extends Mail
             $this->success('Email Set Success');
         }
         
+        //存在与否及其初始化
         if (file_exists('admin_mail.xml')){
             $xml_file = simplexml_load_file('admin_mail.xml');
             $xml_file = json_decode(json_encode($xml_file), true);
@@ -27,7 +30,6 @@ class Mailer extends Mail
             //data init
             $xml_file = $this->xmlInit();
         }
-        
         
         $this->view->assign('xml_file', $xml_file);
         return $this->view->fetch();
@@ -38,13 +40,12 @@ class Mailer extends Mail
      */
     public function index()
     {
-        if ($this->isMail() == config('mail.close')) return $this->view->fetch('close');
+        if ($this->isMail() == config('mail.close')) return $this->view->fetch('close');  
         
         if (request()->isPost()){
         
             $this->getParam();
             $this->init();
-        
             $this->content();
             $this->setIndexXml();
         }
@@ -53,7 +54,6 @@ class Mailer extends Mail
             $xml_file = simplexml_load_file('index_mail.xml');
             $xml_file = json_decode(json_encode($xml_file), true);
         }else {
-            //data init
             $xml_file = $this->xmlInit();
         }
         
@@ -79,4 +79,5 @@ class Mailer extends Mail
             'line'     => '',
         ];
     }
+    
 }

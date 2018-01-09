@@ -141,6 +141,7 @@ class Admin extends Base
             'alog'      => $log_data,
             'log_count' => $log_count,
         ]);
+        
         return $this->view->fetch('admin-log');
     }
     
