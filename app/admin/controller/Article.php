@@ -15,7 +15,7 @@ class Article extends Base
      * 前置操作
      */
     protected $beforeActionList  = [
-        'mailServe' => ['only' => 'add,delete'],    //前置操作的方法请勿在前添加空格
+        'mailServe' => ['only' => 'delete'],    //前置操作的方法请勿在前添加空格
     ];
     
     
