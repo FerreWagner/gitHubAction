@@ -137,6 +137,7 @@ class Article extends Base
         $user_email = session('user_data')['email'];
         
         $mail = new Mail();
+        
         $mail->init();
         $mail->content();
         halt($user_email);

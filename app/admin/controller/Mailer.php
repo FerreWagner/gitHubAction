@@ -10,13 +10,13 @@ class Mailer extends Mail
      */
     public function admin()
     {
-        if ($this->isMail() == config('mail.close')) return $this->view->fetch('close');
+        if (Mail::isMail() == config('mail.close')) return $this->view->fetch('close');
         
         //读取表单/修改配置
         if (request()->isPost()){
-            $this->getParam();
-            $this->setXml(request()->action());
-            $this->success('Email Set Success');
+            Mail::getParam();
+            Mail::setXml(request()->action());
+            Mail::success('Email Set Success');
         }
         
         //存在与否及其初始化
@@ -37,12 +37,12 @@ class Mailer extends Mail
      */
     public function index()
     {
-        if ($this->isMail() == config('mail.close')) return $this->view->fetch('close');  
+        if (Mail::isMail() == config('mail.close')) return $this->view->fetch('close');  
         
         if (request()->isPost()){
-            $this->getParam();
-            $this->setXml(request()->action());
-            $this->success('Email Set Success');
+            Mail::getParam();
+            Mail::setXml(request()->action());
+            Mail::success('Email Set Success');
         }
         
         if (file_exists('index_mail.xml')){

@@ -109,12 +109,22 @@ class Mail extends Base
     }
     
     /**
-     * 获取xml数据
-     * TODO
+     * 读取xml数据
      */
-    public function getXml()
+    public function getXml($module)
     {
-        $xml = simplexml_load_file('');
+        $file_name = $module.'_mail.xml';
+        $xml       = simplexml_load_file($module);
+        
+        //读取xml
+        $this->host      = $xml->host;
+        $this->port      = $xml->port;
+        $this->username  = $xml->username;
+        $this->password  = $xml->password;
+        $this->outtitle  = $xml->outtitle;
+        $this->title     = $xml->title;
+        $this->content   = $xml->content;
+        $this->line      = $xml->line;
     }
     
     
@@ -123,7 +133,7 @@ class Mail extends Base
     /**
      * 表单参数获取
      */
-    public function getParam()
+    protected function getParam()
     {
         $this->host      = request()->param('host');
         $this->port      = request()->param('port');
@@ -140,7 +150,7 @@ class Mail extends Base
      * XML init
      * xml配置文件写入
      */
-    public function setXml($module)
+    protected function setXml($module)
     {
         //文件处理
         $file_name = $module.'_mail.xml';
@@ -155,14 +165,14 @@ class Mail extends Base
         $xml = simplexml_load_file($file_name);
     
         //写入XML
-        $xml->host     = $this->host ? $this->host : 'smtp.163.com';
-        $xml->port     = $this->port ? $this->port : '25';
-        $xml->username = $this->username ? $this->username : '123@163.com';
-        $xml->password = $this->password ? $this->password : '1234';
-        $xml->outtitle = $this->outtitle ? $this->outtitle : '你好';
-        $xml->title    = $this->title ? $this->title : '你好,我是Ferre';
-        $xml->content  = $this->content ? $this->content : '这里是Alexa-Admin.';
-        $xml->line     = $this->line ? $this->line : 20;
+        $xml->host      = $this->host     ? $this->host     : 'smtp.163.com';
+        $xml->port      = $this->port     ? $this->port     : '25';
+        $xml->username  = $this->username ? $this->username : '123@163.com';
+        $xml->password  = $this->password ? $this->password : '1234';
+        $xml->outtitle  = $this->outtitle ? $this->outtitle : '你好';
+        $xml->title     = $this->title    ? $this->title    : '你好,我是Ferre';
+        $xml->content   = $this->content  ? $this->content  : '你好,这里是Alexa-Admin.';
+        $xml->line      = $this->line     ? $this->line     : 20;
     
         $res = $xml->asXML($file_name);
     }
