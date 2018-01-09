@@ -14,11 +14,8 @@ class Mailer extends Mail
         
         //读取表单/修改配置
         if (request()->isPost()){
-            
             $this->getParam();
-            $this->init();
-            $this->content();
-            $this->setAdminXml();
+            $this->setXml(request()->action());
             $this->success('Email Set Success');
         }
         
@@ -43,11 +40,8 @@ class Mailer extends Mail
         if ($this->isMail() == config('mail.close')) return $this->view->fetch('close');  
         
         if (request()->isPost()){
-        
             $this->getParam();
-            $this->init();
-            $this->content();
-            $this->setIndexXml();
+            $this->setXml(request()->action());
             $this->success('Email Set Success');
         }
         
@@ -59,7 +53,6 @@ class Mailer extends Mail
         }
         
         $this->view->assign('xml_file', $xml_file);
-        
         return $this->view->fetch();
     }
     

@@ -28,7 +28,7 @@ class Article extends Model
 
         
         Article::event('before_update', function($_data){
-        if($_FILES['thumb']['tmp_name']){
+            if($_FILES['thumb']['tmp_name']){
                 $_arts = Article::find($_data->id);
                 $_thumbpath = $_SERVER['DOCUMENT_ROOT'].$_arts['thumb'];
                 if(file_exists($_thumbpath)){
@@ -60,6 +60,7 @@ class Article extends Model
                 }
                 
         });
+        
         
     }
 }

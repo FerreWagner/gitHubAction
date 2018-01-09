@@ -6,9 +6,18 @@ use think\Request;
 use app\admin\common\Base;
 use think\Loader;
 use app\admin\model\Article as ArticleModel;
+use app\admin\common\Mail;
 
 class Article extends Base
 {
+    
+    /**
+     * 前置操作
+     */
+    protected $beforeActionList  = [
+        'mailServe' => ['only' => 'add,delete'],    //前置操作的方法请勿在前添加空格
+    ];
+    
     
     /**
      * 显示资源列表
@@ -116,5 +125,20 @@ class Article extends Base
         }else{
             $this->error('删除文章失败！');
         }
+    }
+    
+    /**
+     * 邮件服务
+     */
+    public function mailServe()
+    {
+        if (Mail::isMail() == config('mail.close')) return true;
+        
+        $user_email = session('user_data')['email'];
+        
+        $mail = new Mail();
+        $mail->init();
+        $mail->content();
+        halt($user_email);
     }
 }
