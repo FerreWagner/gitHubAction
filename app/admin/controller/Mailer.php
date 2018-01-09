@@ -5,21 +5,19 @@ use app\admin\common\Mail;
 
 class Mailer extends Mail
 {
+    /**
+     * 后台邮件服务设置
+     */
     public function admin()
     {
+        if ($this->isMail() == config('mail.close')) return $this->view->fetch('close');
+        
         if (request()->isPost()){
-            
             $this->getParam();
             $this->init();
-            
             $this->content();
             $this->setAdminXml();
-//             $this->replay();
-//             if ($this->send()){
-//                 $this->success('success');
-//             }else {
-//                 $this->error('error');
-//             }
+            $this->success('Email Set Success');
         }
         
         if (file_exists('admin_mail.xml')){
@@ -30,13 +28,18 @@ class Mailer extends Mail
             $xml_file = $this->xmlInit();
         }
         
-        $this->view->assign('xml_file', $xml_file);
         
+        $this->view->assign('xml_file', $xml_file);
         return $this->view->fetch();
     }
     
+    /**
+     * 首页邮件服务设置
+     */
     public function index()
     {
+        if ($this->isMail() == config('mail.close')) return $this->view->fetch('close');
+        
         if (request()->isPost()){
         
             $this->getParam();
@@ -59,6 +62,10 @@ class Mailer extends Mail
         return $this->view->fetch();
     }
     
+    
+    /**
+     * xml数据初始化
+     */
     public function xmlInit()
     {
         return [

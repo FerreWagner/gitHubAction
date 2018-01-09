@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:64:"D:\xampp\htdocs\admin\public/../app/admin\view\mailer\admin.html";i:1515402249;s:55:"D:\xampp\htdocs\admin\app\admin\view\public\header.html";i:1515122580;s:56:"D:\xampp\htdocs\admin\app\admin\view\public\base_js.html";i:1515144677;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:64:"D:\xampp\htdocs\admin\public/../app/admin\view\mailer\admin.html";i:1515404306;s:55:"D:\xampp\htdocs\admin\app\admin\view\public\header.html";i:1515122580;s:56:"D:\xampp\htdocs\admin\app\admin\view\public\base_js.html";i:1515144677;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -107,8 +107,6 @@
                     </form>
                     <div style="height:100px;"></div>
                 </div>
-
-
 
 
               </div>

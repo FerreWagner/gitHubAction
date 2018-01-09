@@ -3,6 +3,7 @@ namespace app\admin\common;
 
 use think\Controller;
 use PHPMailer\PHPMailer\PHPMailer;
+use app\admin\model\System;
 
 class Mail extends Controller
 {
@@ -52,8 +53,8 @@ class Mail extends Controller
         $xml->content  = $this->mail->Body;
         $xml->line     = $this->mail->WordWrap;
         
-        $xml->asXML('admin_mail.xml');
-        
+        $res = $xml->asXML('admin_mail.xml');
+//         halt($res);
     }
     
     
@@ -168,7 +169,7 @@ class Mail extends Controller
     
     
     /**
-     * 参数配置
+     * 表单参数获取
      */
     protected function getParam()
     {
@@ -180,6 +181,15 @@ class Mail extends Controller
         $this->title               = request()->param('title');
         $this->content             = request()->param('content');
         $this->line                = request()->param('line');
+    }
+    
+    /*
+     * 邮件开启服务
+     */
+    protected function isMail()
+    {
+        $is_mail_obj = System::field('is_mail')->find(1);
+        return $is_mail_obj->is_mail;
     }
     
     
