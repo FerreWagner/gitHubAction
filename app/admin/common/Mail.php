@@ -126,7 +126,7 @@ class Mail extends Controller
     protected function content()
     {
         
-        $this->mail->FromName      = $this->title ? $this->title : 'Hello';
+        $this->mail->FromName      = $this->outtitle ? $this->outtitle : 'Hello';
         //标题，内容，和备用内容
         $this->mail->Subject       = $this->title ? $this->title : 'Hello';
         $this->mail->Body          = $this->content ? $this->content : 'Nice To Meet You';

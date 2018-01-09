@@ -48,6 +48,7 @@ class Mailer extends Mail
             $this->init();
             $this->content();
             $this->setIndexXml();
+            $this->success('Email Set Success');
         }
         
         if (file_exists('index_mail.xml')){
