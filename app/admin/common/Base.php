@@ -27,6 +27,8 @@ class Base extends Controller
         
         if ($request->module() == 'admin' && in_array($action, config('mail_action'))){
 //             halt(Common::mailFeedback($action));
+
+            //TODO
             $this->mailServe(config('mail.root'), Common::mailFeedback($action));    //返回消息体
 //             $this->mailServe();
         }
