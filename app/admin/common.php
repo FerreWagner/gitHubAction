@@ -12,15 +12,8 @@ class Common
     
     public static function mailFeedback($action)
     {
-        
         //消息处理,可自定义编写
-        switch ($action)
-        {
-            case config('mail_action.0'):
-                $content = 'content';
-                break;
-            default:
-                $content = 'ROOT您好,用户'.session('user_name').'在'.date('Y-m-d H:i:s').'操作了'.$action.'方法';
-        }
+        return 'ROOT您好,用户'.session('user_name').'在'.date('Y-m-d H:i:s').'操作了'.$action.'方法';
+        
     }
 }

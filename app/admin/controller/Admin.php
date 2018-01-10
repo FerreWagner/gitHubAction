@@ -95,8 +95,8 @@ class Admin extends Base
                 $this->error($validate->getError());
             }
             
-
-            $this->mailServe($data['email'], '您好,恭喜您注册成功.');
+            //mail serve
+            $this->mailServe($data['email'], config('mail.resgiter_content'));
             
             $model = new AdminModel();
             $res   = $model->allowField(true)->save($data);

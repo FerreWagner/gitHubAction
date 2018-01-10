@@ -6,7 +6,6 @@
  */
 
 return [
-    'Admin/add',
     'Admin/delete',
     'Admin/trans',
     'System/linkupdate',
