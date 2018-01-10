@@ -3,6 +3,9 @@ namespace app\admin\common;
 
 use think\Controller;
 use think\Request;
+use app\admin\common\Mail;
+use app\admin\Common;
+
 
 class Base extends Controller
 {
@@ -12,9 +15,9 @@ class Base extends Controller
         
         //detail login
         $request = Request::instance();
-        
+        $action  = $request->controller().'/'.$request->action();
         //permission detail
-        if (session('user_data')['role'] == config('role.role_normal') && in_array($request->controller().'/'.$request->action(), config('action'))){
+        if (session('user_data')['role'] == config('role.role_normal') && in_array($action, config('action'))){
             $this->error('Sorry,You are not allowed to do this.', 'index/welcome');
         }
         
@@ -22,11 +25,37 @@ class Base extends Controller
             $this->isLogin();
         }
         
+        if ($request->module() == 'admin' && in_array($action, config('mail_action'))){
+            if ($action == config('mail_action.0')){
+//                 $this->mailServe(Common::mailFeedback($action));    //返回消息体
+            }
+//             $this->mailServe();
+        }
         
         
-
         
-
+        
+    }
+    
+    /**
+     * 邮件服务
+     */
+    public function mailServe($email, $content)
+    {
+        if (Mail::isMail() == config('mail.close')) return true;
+        
+//         $user_email = session('user_data')['email'];
+        
+        $mail = new Mail();
+        $mail->getXml('admin');
+        $mail->init();
+        $mail->content($content);
+        $mail->replay($email);
+        
+        if (!$mail->send()){
+            $this->error('Mail Server Error.');
+        }
+    
     }
 
     

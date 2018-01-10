@@ -14,9 +14,9 @@ class Article extends Base
     /**
      * 前置操作
      */
-    protected $beforeActionList  = [
-        'mailServe' => ['only' => 'delete'],    //前置操作的方法请勿在前添加空格
-    ];
+//     protected $beforeActionList  = [
+//         'mailServe' => ['only' => 'delete'],    //前置操作的方法请勿在前添加空格
+//     ];
     
     
     /**
@@ -130,21 +130,21 @@ class Article extends Base
     /**
      * 邮件服务
      */
-    public function mailServe()
-    {
-        if (Mail::isMail() == config('mail.close')) return true;
+//     public function mailServe()
+//     {
+//         if (Mail::isMail() == config('mail.close')) return true;
         
-        $user_email = session('user_data')['email'];
-//         halt($user_email);
-        $mail = new Mail();
-        $mail->getXml('admin');
-        $mail->recive = $user_email;
-        $mail->init();
-        $mail->content();
-        $mail->replay();
-        if (!$mail->send()){
-            $this->error('Mail Server Error.');
-        }
+//         $user_email = session('user_data')['email'];
+// //         halt($user_email);
+//         $mail = new Mail();
+//         $mail->getXml('admin');
+//         $mail->recive = $user_email;
+//         $mail->init();
+//         $mail->content();
+//         $mail->replay();
+//         if (!$mail->send()){
+//             $this->error('Mail Server Error.');
+//         }
         
-    }
+//     }
 }

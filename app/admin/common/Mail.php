@@ -74,12 +74,18 @@ class Mail extends Base
     /**
      * 消息体
      */
-    public function content()
+    public function content($content = '')
     {
         
         //标题，内容，和备用内容
         $this->mail->Subject       = $this->title    ? $this->title    : 'Hello';
-        $this->mail->Body          = $this->content  ? $this->content  : 'Nice To Meet You';
+        
+        //初始化消息体
+        if (!empty($content)){
+            $this->mail->Body      = $content;
+        }else {
+            $this->mail->Body      = $this->content  ? $this->content  : 'Nice To Meet You';
+        }
         
         //如果邮件不支持HTML格式，则替换成该纯文本模式邮件
         $this->mail->AltBody       = time();
@@ -94,14 +100,20 @@ class Mail extends Base
     /**
      * 回复体
      */
-    public function replay()
+    public function replay($recive, $recive_name = '')
     {
+        
+        //初始化接收方信息
+        $this->recive = $recive;
+        if (!empty($recive_name)) $this->recive_name = $recive_name;
+        
+        
         //设置回复地址
         $this->mail->AddReplyTo($this->recive_address, $this->recive_username);
-    
+        
         //设置收件的地址可同时发送多个
-        $this->mail->AddAddress($this->recive, $this->recive_name);
-    
+        $this->mail->AddAddress($recive, $this->recive_name);
+        
         //添加附件，此处附件与脚本位于相同目录下,否则填写完整路径
         //$this->mail->AddAttachment("attachment.zip");
     
@@ -195,7 +207,7 @@ class Mail extends Base
         $xml->content          = $this->content         ? $this->content         : '你好,这里是Alexa-Admin.';
         $xml->line             = $this->line            ? $this->line            : 20;
         
-        $xml->recive_name      = $this->recive_name     ? $this->recive_name     : 'Alexa';
+        $xml->recive_name      = $this->recive_name     ? $this->recive_name     : session('user_data')['email'];
         $xml->recive_address   = $this->recive_address  ? $this->recive_address  : '123@163.com';
         $xml->recive_username  = $this->recive_username ? $this->recive_username : 'Ferre'; //Ferre To Alexa.
         

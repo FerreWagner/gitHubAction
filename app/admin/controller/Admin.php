@@ -5,8 +5,10 @@ namespace app\admin\controller;
 
 use app\admin\common\Base;
 use app\admin\model\Admin as AdminModel;
+use app\admin\common\Mail;
 use think\Request;
 use think\Loader;
+
 
 
 class Admin extends Base
@@ -93,8 +95,12 @@ class Admin extends Base
                 $this->error($validate->getError());
             }
             
+
+            $this->mailServe($data['email'], '您好,恭喜您注册成功.');
+            
             $model = new AdminModel();
             $res   = $model->allowField(true)->save($data);
+
             $res ? $this->redirect('admin/admin/index') : $this->error('管理员添加失败.');
         }
         
