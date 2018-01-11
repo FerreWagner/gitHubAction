@@ -4,7 +4,7 @@ namespace app\admin\common;
 use PHPMailer\PHPMailer\PHPMailer;
 use app\admin\model\System;
 
-class Mail extends Base
+class Mail
 {
     #TIPS:QQ邮箱需要做代理邮件的开启，且密码自动生成
     #TIPS:当调用邮件服务类时,初始化设置为：getParam(); init();content();setXml();后台使用服务时，调用replay和send方法；
@@ -50,14 +50,14 @@ class Mail extends Base
         $this->mail->SMTPAuth      = true;
         $this->mail->SMTPKeepAlive = true;
         
-        $this->mail->SMTPSecure    = "SSL";  //or tls
+        $this->mail->SMTPSecure    = "ssl";  //or tls
+        $this->mail->Port          = $this->port ? $this->port : '25';
         
         // 设置邮件优先级 1：高, 3：正常（默认）, 5：低
         $this->mail->Priority      = 1;
         
         //初始化，不必在意
         $this->mail->Host          = $this->host ? $this->host : 'smtp.163.com';
-        $this->mail->Port          = $this->port ? $this->port : '25';
         
         //填写你的邮箱账号和密码
         $this->mail->Username      = $this->username ? $this->username : '18408229270@163.com';
@@ -161,7 +161,7 @@ class Mail extends Base
     /**
      * 表单参数获取
      */
-    protected function getParam()
+    public function getParam()
     {
         $this->host            = request()->param('host');
         $this->port            = request()->param('port');
@@ -183,7 +183,7 @@ class Mail extends Base
      * XML init
      * xml配置文件写入
      */
-    protected function setXml($module)
+    public function setXml($module)
     {
         //文件处理
         $file_name = $module.'_mail.xml';
