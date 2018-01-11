@@ -51,7 +51,7 @@ class Mail
         $this->mail->SMTPKeepAlive = true;
         
         $this->mail->SMTPSecure    = "ssl";  //or tls
-        $this->mail->Port          = $this->port ? $this->port : '25';
+        $this->mail->Port          = $this->port ? $this->port : '465'; //阿里云服务商对25端口进行了封禁处理
         
         // 设置邮件优先级 1：高, 3：正常（默认）, 5：低
         $this->mail->Priority      = 1;

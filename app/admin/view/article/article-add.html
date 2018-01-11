@@ -42,8 +42,10 @@
                         缩略图
                     </label>
                     <div class="layui-input-block">
-                        <input type="file" name="thumb">
-                    </div>
+			   		    <input type="hidden" name="picture" value="uploadpic">  
+			            <input type="file" id="uploadForm" name="thumb" />   
+			            <input type="button" value="上传" onclick="doUpload();">  
+					</div>
                 </div>
                 <div class="layui-form-item">
                     <label for="desc" class="layui-form-label">
@@ -94,6 +96,27 @@
             </form>
         </div>
         {include file='public/base_js' /}
+        
+<script type="text/javascript">  
+    function doUpload() {    
+     var formData = new FormData($( "#uploadForm" )[0]);    
+     $.ajax({    
+          url: "{:url('article/upload')}" ,  /*这是处理文件上传的servlet*/  
+          type: 'POST',    
+          data: formData,    
+          async: false,    
+          cache: false,    
+          contentType: false,    
+          processData: false,    
+          success: function (returndata) {   
+        	  $('#thumb').append('append');
+          },    
+          error: function (returndata) {    
+              alert(returndata);    
+          }    
+     });    
+}    
+</script>  
 
         <script>
             layui.use(['form','layer','layedit'], function(){

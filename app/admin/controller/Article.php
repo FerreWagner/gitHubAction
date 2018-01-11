@@ -79,6 +79,11 @@ class Article extends Base
         $this->view->assign('cate', $cate);
         return $this->view->fetch('article-add');
     }
+    
+    public function upload()
+    {
+        dump($_FILES);die;
+    }
 
 
     /**

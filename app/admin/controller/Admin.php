@@ -107,6 +107,7 @@ class Admin extends Base
         return $this->view->fetch('admin-add');
     }
     
+    
     public function delete($id)
     {
         $res = AdminModel::destroy($id);
