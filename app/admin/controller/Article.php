@@ -26,7 +26,7 @@ class Article extends Base
      */
     public function index(Request $request)
     {
-        $article = db('article')->field('a.*,b.catename')->alias('a')->join('alexa_category b','a.cate=b.id')->order('a.id desc')->paginate(10);
+        $article = db('article')->field('a.*,b.catename')->alias('a')->join('alexa_category b','a.cate=b.id')->order('a.id desc')->paginate(config('conf.page'));
         
         //search function
         if ($request->isPost()){
@@ -34,12 +34,12 @@ class Article extends Base
             
             if (empty($search['start']) || empty($search['end'])){
                 $article = db('article')->field('a.*,b.catename')->alias('a')->join('alexa_category b','a.cate=b.id')->order('a.id desc')
-                                        ->where('title', 'like', '%'.$search['title'].'%')->paginate(10);
+                                        ->where('title', 'like', '%'.$search['title'].'%')->paginate(config('conf.page'));
                 
             }else {
                 $article = db('article')->field('a.*,b.catename')->alias('a')->join('alexa_category b','a.cate=b.id')->order('a.id desc')
                                         ->where('time', 'between', [strtotime($search['start']), strtotime($search['end'])])
-                                        ->where('title', 'like', '%'.$search['title'].'%')->paginate(10);
+                                        ->where('title', 'like', '%'.$search['title'].'%')->paginate(config('conf.page'));
                 
             }
         }

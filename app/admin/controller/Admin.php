@@ -24,17 +24,17 @@ class Admin extends Base
      */
     public function index(Request $request)
     {
-        $admin = AdminModel::paginate(6);
+        $admin = AdminModel::paginate(config('conf.page'));
         
         //admin search function
         if ($request->isPost()){
             $search = $request->param();
             
             if (empty($search['start']) || empty($search['end'])){
-                $admin = AdminModel::where('username', 'like', '%'.$search['username'].'%')->paginate(6);
+                $admin = AdminModel::where('username', 'like', '%'.$search['username'].'%')->paginate(config('conf.page'));
             }else {
                 $admin = AdminModel::where('update_time', 'between', [strtotime($search['start']), strtotime($search['end'])])
-                                   ->where('username', 'like', '%'.$search['username'].'%')->paginate(6);
+                                   ->where('username', 'like', '%'.$search['username'].'%')->paginate(config('conf.page'));
             }
         }
         
@@ -134,12 +134,12 @@ class Admin extends Base
      */
     public function logList()
     {
-        $log_data  = db('alog')->where('name', session('user_name'))->order('id', 'desc')->paginate(8);
+        $log_data  = db('alog')->where('name', session('user_name'))->order('id', 'desc')->paginate(config('conf.page'));
         $log_count = db('alog')->where('name', session('user_name'))->count('id');
         
         //root role
         if (session('user_data')['role'] == config('role.role_root')){
-            $log_data  = db('alog')->order('id', 'desc')->paginate(8);
+            $log_data  = db('alog')->order('id', 'desc')->paginate(config('conf.page'));
             $log_count = db('alog')->count('id');
         }
         
