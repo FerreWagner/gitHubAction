@@ -12,5 +12,5 @@ class Admin extends Model
         'update_time'    => 'timestamp:Y-m-d H:i:s',
     ];
     // 定义自动完成的属性
-    protected $insert = ['role' => 1];
+//     protected $insert = ['role' => 1];
 }

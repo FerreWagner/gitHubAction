@@ -89,18 +89,18 @@ class Admin extends Base
             $data['create_time']   = time();
             $data['update_time']   = time();
             
-            
             $validate = Loader::validate('Admin');
             if(!$validate->scene('add')->check($data)){
                 $this->error($validate->getError());
             }
             
             //mail serve
-            $this->mailServe($data['email'], config('mail.resgiter_content'));
+            $this->mailServe($data['email'], $data['username'].config('mail.resgiter_content'));
             
             $model = new AdminModel();
             $res   = $model->allowField(true)->save($data);
-
+            
+            
             $res ? $this->redirect('admin/admin/index') : $this->error('管理员添加失败.');
         }
         
