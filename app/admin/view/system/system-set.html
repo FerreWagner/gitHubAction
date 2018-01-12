@@ -38,8 +38,7 @@
                                 <span class='x-red'>*</span>描述
                             </label>
                             <div class="layui-input-block">
-                                <input type="text" name="desc" autocomplete="off" placeholder="空制在80个汉字，160个字符以内"
-                                class="layui-input" value="{$system->desc}">
+                                <input type="text" name="desc" autocomplete="off" placeholder="空制在80个汉字，160个字符以内" class="layui-input" value="{$system->desc}">
                             </div>
                         </div>
                         
@@ -48,8 +47,7 @@
                                 <span class='x-red'>*</span>备案号
                             </label>
                             <div class="layui-input-block">
-                                <input type="text" name="record" autocomplete="off" placeholder="空制在80个汉字，160个字符以内"
-                                class="layui-input" value="{$system->record}">
+                                <input type="text" name="record" autocomplete="off" placeholder="空制在80个汉字，160个字符以内" class="layui-input" value="{$system->record}">
                             </div>
                         </div>
 
@@ -89,6 +87,16 @@
                                 </select>
                             </div>
                 		</div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">
+                                <span class='x-red'>*</span>图片存放
+                            </label>
+                            <div class="layui-input-block">
+				                <input type="radio" name="type" {if $system->type == 0}checked{/if} value="0" title="本地服务器">
+			      				<input type="radio" name="type" {if $system->type == 1}checked{/if} value="1" title="七牛云" >
+			      				<!-- <input type="radio" name="type" {if $system->type == 2}checked{/if} value="阿里云OSS" title="阿里云OSS" > -->                            </div>
+                        </div>
 
                 		<!--用隐藏域发送is_update字段值-->
                         <input type="hidden" name="is_update" value="{$system->is_update}">

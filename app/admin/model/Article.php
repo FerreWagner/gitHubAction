@@ -13,8 +13,9 @@ class Article extends Model
     
     protected static function init(){
         Article::event('before_insert', function($_data){
-            if (request()->param('type') == 0){
+            if (self::getSystem()['type'] == config('website.local')){
                 if(@$_FILES['thumb']['tmp_name']){
+                    
                     $_file = request()->file('thumb');
                     $_info = $_file->move(ROOT_PATH . 'public' . DS . 'uploads');
                     if ($_info){    //upload success
@@ -28,9 +29,7 @@ class Article extends Model
                         return $_data['thumb'] ? ['err' => 0, 'msg' => '上传完成', 'data' => $_data['thumb']] : ['err' => 1, 'msg' => '本地上传失败', 'data' => ''];
                     }
                 }
-            }elseif (request()->param('type') == 1){
-//                 $request = new Request();
-                if (request()->isPost()){
+            }elseif (self::getSystem()['type'] == config('website.qiniu')){
                 
                     $file = request()->file('thumb');
                     //本地路径
@@ -38,7 +37,7 @@ class Article extends Model
                     //获取后缀
                     $ext = pathinfo($file->getInfo('name'), PATHINFO_EXTENSION);
                     //上传到七牛后保存的文件名(加盐)
-                    $key = config('salt.password_salt').substr(md5($file->getRealPath()) , 0, 5). date('YmdHis') . rand(0, 9999) . '.' . $ext;
+                    $key = config('qiniu.salt').substr(md5($file->getRealPath()) , 0, 5). date('YmdHis') . rand(0, 9999) . '.' . $ext;
                 
                     $ak = config('qiniu.ak');
                     $sk = config('qiniu.sk');
@@ -58,8 +57,7 @@ class Article extends Model
                 
                     $err ? $_data['thumb'] = '图片上传失败' : $_data['thumb'] = $domain.'/'.$ret['key'];
                 
-                }
-            }elseif (request()->param('type') == 2){
+            }elseif (self::getSystem()['type'] == config('website.oss')){
                 //TODO 阿里云OSS上传功能
             }
             
@@ -103,5 +101,14 @@ class Article extends Model
         });
         
         
+    }
+    
+    /**
+     * 后面会对系统表和写法进行重构，现在先使用此操作取数据
+     * @return \think\db\false|PDOStatement|string|\think\Model
+     */
+    public static function getSystem()
+    {
+        return db('system')->find();
     }
 }
