@@ -86,19 +86,14 @@ class Article extends Base
     public function upload(Request $request)
     {
         if ($request->isPost()){
+            
             $file = $request->file('thumb');
             //本地路径
             $filePath = $file->getRealPath();
             //获取后缀
             $ext = pathinfo($file->getInfo('name'), PATHINFO_EXTENSION);
-            //获取当前控制器名
-//             $controller = $request->controller();
-            //上传到骑牛后保存的文件名
-            $key = substr(md5($file->getRealPath()) , 0, 5). date('YmdHis') . rand(0, 9999) . '.' . $ext;
-            //引入类库(因不是命名空间的SDK,所以只能用vendor方式引入)
-//             $require = vendor('qiniu/php-sdk/autoload');
-            
-//             if (!$require) die('autoload function require error,Sry');
+            //上传到七牛后保存的文件名(加盐)
+            $key = config('salt.password_salt').substr(md5($file->getRealPath()) , 0, 5). date('YmdHis') . rand(0, 9999) . '.' . $ext;
             
             $ak = config('qiniu.ak');
             $sk = config('qiniu.sk');
@@ -114,6 +109,7 @@ class Article extends Base
             
             //调用uploadmanager的putfile方法进行文件的上传
             list($ret, $err) = $uploadMgr->putFile($token, $key, $filePath);
+            
             if ($err !== null){
                 return ['err' => 1, 'msg' => $err, 'data' => ''];
             }else {
