@@ -85,6 +85,7 @@ class Article extends Base
     
     public function upload(Request $request)
     {
+        
         if ($request->isPost()){
             
             $file = $request->file('thumb');
@@ -97,6 +98,7 @@ class Article extends Base
             
             $ak = config('qiniu.ak');
             $sk = config('qiniu.sk');
+            
             //构建鉴权对象
             $auth = new Auth($ak, $sk);
             //要上传的空间
@@ -114,7 +116,7 @@ class Article extends Base
                 return ['err' => 1, 'msg' => $err, 'data' => ''];
             }else {
                 //返回图片的完整URL
-                return json(['err' => 0, 'msg' => '上传完成', 'data' => ($domain.'/'.$ret['key'])]);
+                return ['err' => 0, 'msg' => '上传完成', 'data' => ($domain.'/'.$ret['key'])];
             }
             
         }

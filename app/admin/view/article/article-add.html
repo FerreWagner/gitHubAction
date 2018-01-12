@@ -3,13 +3,6 @@
 <script src="__STATIC__/ueditor/ueditor.all.min.js"></script>
 <script src="__STATIC__/ueditor/lang/zh-cn/zh-cn.js"></script>
 
-<link rel="stylesheet" href="__STATIC__/lib/bootstrap/css/bootstrap.min.css">
-<style>
-input[type="file"] {
-  color: transparent;
-}
-</style>
-</style>
 <body>
         <div class="x-body">
             <form class="layui-form layui-form-pane" id="aform" action="{:url('admin/article/add')}" method="post" enctype="multipart/form-data">
@@ -30,55 +23,6 @@ input[type="file"] {
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label for="order" class="layui-form-label">
-                       排序
-                    </label>
-                    <div class="layui-input-block">
-                        <input type="text" name="order" value="6" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label for="keywords" class="layui-form-label">
-                        关键词
-                    </label>
-                    <div class="layui-input-block">
-                        <input type="text" name="keywords" value="Alexa,Ferre" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label for="kkeywords" class="layui-form-label">
-                        缩略图
-                    </label>
-                    <div class="layui-input-block">
-			            <input type="file" id="uploadForm" name="thumb" class="btn"/> 
-			            <input type="button" value="上传" onclick="doUpload();">  
-					</div>
-                </div>
-                <div class="layui-form-item">
-                    <label for="desc" class="layui-form-label">
-                        描述
-                    </label>
-                    <div class="layui-input-block">
-                        <input type="text" name="desc" value="About Alexa" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label for="see" class="layui-form-label">
-                        浏览
-                    </label>
-                    <div class="layui-input-block">
-                        <input type="text" name="see" value="12" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item layui-form-text">
-                    <div class="layui-input-block">
-                        <textarea id="content" name="content"></textarea>
-                    </div>
-                    <label for="content" class="layui-form-label" style="top: -2px;">
-                        描述
-                    </label>
-                </div>
-                <div class="layui-form-item">
                     <div class="layui-inline">
                         <label class="layui-form-label">
                             所在类别
@@ -96,6 +40,72 @@ input[type="file"] {
                         </div>
                     </div>
                 </div>
+
+                <div class="layui-form-item">
+                    <label for="keywords" class="layui-form-label">
+                        关键词
+                    </label>
+                    <div class="layui-input-block">
+                        <input type="text" name="keywords" value="Alexa,Ferre" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="desc" class="layui-form-label">
+                        描述
+                    </label>
+                    <div class="layui-input-block">
+                        <input type="text" name="desc" value="About Alexa" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                
+                <div class="layui-form-item">
+                    <label for="thumb" class="layui-form-label">
+                        缩略图
+                    </label>
+                    <div class="layui-input-block">
+				            <input type="file" id="uploadForm" name="thumb" class="layui-btn layui-btn-primary"/> 
+				            <!-- <input type="button" value="上传" class="layui-btn" onclick="doUpload();">   -->
+					</div>
+                    
+                </div>
+                
+                <div class="layui-form-item">
+                <label for="thumb" class="layui-form-label">
+                       图片位置
+                    </label>
+	                <input type="radio" name="type" value="0" checked title="本地服务器">
+      				<input type="radio" name="type" value="1" title="七牛云" >
+      				<!-- <input type="radio" name="type" value="阿里云OSS" title="阿里云OSS" > -->
+      				
+				</div>
+				
+                <div class="layui-form-item">
+                    <label for="order" class="layui-form-label">
+                       排序
+                    </label>
+                    <div class="layui-input-block">
+                        <input type="text" name="order" value="6" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                
+                <div class="layui-form-item">
+                    <label for="see" class="layui-form-label">
+                        浏览
+                    </label>
+                    <div class="layui-input-block">
+                        <input type="text" name="see" value="12" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                
+                <div class="layui-form-item layui-form-text">
+                    <div class="layui-input-block">
+                        <textarea id="content" name="content"></textarea>
+                    </div>
+                    <label for="content" class="layui-form-label" style="top: -2px;">
+                       内容
+                    </label>
+                </div>
+                
                 <div class="layui-form-item">
                     <input class="layui-btn" type="submit" value="立即发布" lay-filter="add" lay-submit>
                        
@@ -104,27 +114,32 @@ input[type="file"] {
         </div>
         {include file='public/base_js' /}
         
-<script type="text/javascript">  
-    function doUpload() {    
-        var form = document.getElementById("aform");
-        var fd = new FormData(form);
-        $.ajax({    
-          url: "{:url('article/upload')}" ,  /*这是处理文件上传的servlet*/  
-          type: 'POST',    
-          data: fd, 
-          async: false,    
-          cache: false,    
-          contentType: false,    
-          processData: false,    
-          success: function (response,status,xhr) {   
-        	  console.log(xhr);
-       	  },    
-          error: function (returndata) {    
-              alert(returndata);    
-          }    
-     });    
-}    
-</script>  
+		<script type="text/javascript">  
+		    function doUpload() {    
+		        var form = document.getElementById("aform");
+		        var fd = new FormData(form);
+		        $.ajax({    
+		          url: "{:url('article/upload')}" ,
+		          type: 'POST',    
+		          data: fd, 
+		          async: false,    
+		          cache: false,    
+		          contentType: false,    
+		          processData: false,    
+		          success: function (response,status,xhr) {
+		        	  layer.msg('上传成功', {icon: 6});
+		        	  console.log(xhr);
+		       	  },    
+		          error: function (returndata) {
+		        	  layer.msg('上传失败', {icon: 5});
+		        	  console.log(returndata);
+
+		        	  //原来的处理方式
+		              //alert(returndata);    
+		          }    
+		      });    
+			}    
+		</script>  
 
         <script>
             layui.use(['form','layer','layedit'], function(){
