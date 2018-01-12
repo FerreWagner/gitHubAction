@@ -9,5 +9,6 @@ return array(
     'think\\composer\\' => array($vendorDir . '/topthink/think-installer/src'),
     'think\\' => array($baseDir . '/thinkphp/library/think'),
     'app\\' => array($baseDir . '/application'),
+    'Qiniu\\' => array($vendorDir . '/qiniu/php-sdk/src/Qiniu'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
 );

@@ -7,6 +7,8 @@ use app\admin\common\Base;
 use think\Loader;
 use app\admin\model\Article as ArticleModel;
 use app\admin\common\Mail;
+use Qiniu\Auth;
+use Qiniu\Storage\UploadManager;
 
 class Article extends Base
 {
@@ -80,9 +82,47 @@ class Article extends Base
         return $this->view->fetch('article-add');
     }
     
-    public function upload()
+    
+    public function upload(Request $request)
     {
-        dump($_FILES);die;
+        if ($request->isPost()){
+            $file = $request->file('thumb');
+            //本地路径
+            $filePath = $file->getRealPath();
+            //获取后缀
+            $ext = pathinfo($file->getInfo('name'), PATHINFO_EXTENSION);
+            //获取当前控制器名
+//             $controller = $request->controller();
+            //上传到骑牛后保存的文件名
+            $key = substr(md5($file->getRealPath()) , 0, 5). date('YmdHis') . rand(0, 9999) . '.' . $ext;
+            //引入类库(因不是命名空间的SDK,所以只能用vendor方式引入)
+//             $require = vendor('qiniu/php-sdk/autoload');
+            
+//             if (!$require) die('autoload function require error,Sry');
+            
+            $ak = config('qiniu.ak');
+            $sk = config('qiniu.sk');
+            //构建鉴权对象
+            $auth = new Auth($ak, $sk);
+            //要上传的空间
+            $bucket = config('qiniu.bucket');
+            $domain = config('qiniu.domain');
+            $token = $auth->uploadToken($bucket);
+            
+            //初始化uploadmanager对象并进行文件的上传
+            $uploadMgr = new UploadManager();
+            
+            //调用uploadmanager的putfile方法进行文件的上传
+            list($ret, $err) = $uploadMgr->putFile($token, $key, $filePath);
+            if ($err !== null){
+                return ['err' => 1, 'msg' => $err, 'data' => ''];
+            }else {
+                //返回图片的完整URL
+                return json(['err' => 0, 'msg' => '上传完成', 'data' => ($domain.'/'.$ret['key'])]);
+            }
+            
+        }
+        
     }
 
 

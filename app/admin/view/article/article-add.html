@@ -2,9 +2,17 @@
 <script src="__STATIC__/ueditor/ueditor.config.js"></script>
 <script src="__STATIC__/ueditor/ueditor.all.min.js"></script>
 <script src="__STATIC__/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+<link rel="stylesheet" href="__STATIC__/lib/bootstrap/css/bootstrap.min.css">
+<style>
+input[type="file"] {
+  color: transparent;
+}
+</style>
+</style>
 <body>
         <div class="x-body">
-            <form class="layui-form layui-form-pane" action="{:url('admin/article/add')}" method="post" enctype="multipart/form-data">
+            <form class="layui-form layui-form-pane" id="aform" action="{:url('admin/article/add')}" method="post" enctype="multipart/form-data">
                 <div class="layui-form-item">
                     <label for="L_title" class="layui-form-label">
                         标题
@@ -42,8 +50,7 @@
                         缩略图
                     </label>
                     <div class="layui-input-block">
-			   		    <input type="hidden" name="picture" value="uploadpic">  
-			            <input type="file" id="uploadForm" name="thumb" />   
+			            <input type="file" id="uploadForm" name="thumb" class="btn"/> 
 			            <input type="button" value="上传" onclick="doUpload();">  
 					</div>
                 </div>
@@ -99,18 +106,19 @@
         
 <script type="text/javascript">  
     function doUpload() {    
-     var formData = new FormData($( "#uploadForm" )[0]);    
-     $.ajax({    
+        var form = document.getElementById("aform");
+        var fd = new FormData(form);
+        $.ajax({    
           url: "{:url('article/upload')}" ,  /*这是处理文件上传的servlet*/  
           type: 'POST',    
-          data: formData,    
+          data: fd, 
           async: false,    
           cache: false,    
           contentType: false,    
           processData: false,    
-          success: function (returndata) {   
-        	  $('#thumb').append('append');
-          },    
+          success: function (response,status,xhr) {   
+        	  console.log(xhr);
+       	  },    
           error: function (returndata) {    
               alert(returndata);    
           }    
