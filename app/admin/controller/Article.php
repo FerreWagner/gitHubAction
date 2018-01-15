@@ -29,7 +29,7 @@ class Article extends Base
     public function index(Request $request)
     {
         $article = db('article')->field('a.*,b.catename')->alias('a')->join('alexa_category b','a.cate=b.id')->order('a.id desc')->paginate(config('conf.page'));
-        
+        $count   = db('article')->count();
         //search function
         if ($request->isPost()){
             $search  = $request->param();
@@ -47,7 +47,10 @@ class Article extends Base
         }
         
         //list
-        $this->view->assign('article', $article);
+        $this->view->assign([
+            'article' => $article,
+            'count'   => $count,
+        ]);
         return $this->view->fetch('article-list');
     }
 
