@@ -55,7 +55,7 @@ class Article extends Model
                     //调用uploadmanager的putfile方法进行文件的上传
                     list($ret, $err) = $uploadMgr->putFile($token, $key, $filePath);
                 
-                    $err ? $_data['thumb'] = '图片上传失败' : $_data['thumb'] = $domain.'/'.$ret['key'];
+                    $err ? $_data['thumb'] = '图片上传失败' : $_data['thumb'] = 'http://'.$domain.'/'.$ret['key'];    //or https
                 
             }elseif (self::getSystem()['type'] == config('website.oss')){
                 //TODO 阿里云OSS上传功能
