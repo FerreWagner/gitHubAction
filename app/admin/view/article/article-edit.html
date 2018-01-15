@@ -22,60 +22,6 @@
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label for="order" class="layui-form-label">
-                       排序
-                    </label>
-                    <div class="layui-input-block">
-                        <input type="text" name="order" value="{$article.order}" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label for="keywords" class="layui-form-label">
-                        关键词
-                    </label>
-                    <div class="layui-input-block">
-                        <input type="text" name="keywords" value="{$article.keywords}" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label for="kkeywords" class="layui-form-label">
-                        缩略图
-                    </label>
-                    <div class="layui-input-block">
-                        <input type="file" name="thumb">
-                        {if condition="$article['thumb'] neq ''"}
-                        <img style="float:left;" src="{$article.thumb}" width="200">
-                        {else /}
-                        暂无缩略图
-                        {/if}
-                    </div>
-                </div>
-
-                <div class="layui-form-item">
-                    <label for="desc" class="layui-form-label">
-                        描述
-                    </label>
-                    <div class="layui-input-block">
-                        <input type="text" name="desc" value="{$article.desc}" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label for="see" class="layui-form-label">
-                        浏览
-                    </label>
-                    <div class="layui-input-block">
-                        <input type="text" name="see" value="{$article.see}" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item layui-form-text">
-                    <div class="layui-input-block">
-                        <textarea id="content" name="content">{$article.content}</textarea>
-                    </div>
-                    <label for="content" class="layui-form-label" style="top: -2px;">
-                        描述
-                    </label>
-                </div>
-                <div class="layui-form-item">
                     <div class="layui-inline">
                         <label class="layui-form-label">
                             所在类别
@@ -93,6 +39,62 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="layui-form-item">
+                    <label for="keywords" class="layui-form-label">
+                        关键词
+                    </label>
+                    <div class="layui-input-block">
+                        <input type="text" name="keywords" value="{$article.keywords}" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="desc" class="layui-form-label">
+                        描述
+                    </label>
+                    <div class="layui-input-block">
+                        <input type="text" name="desc" value="{$article.desc}" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="kkeywords" class="layui-form-label">
+                        缩略图
+                    </label>
+                    <div class="layui-input-block">
+                        <input type="file" name="thumb" class="layui-btn layui-btn-primary">
+                        {if condition="$article['thumb'] neq ''"}
+                        <img style="float:left;" src="{$article.thumb}" width="200">
+                        {else /}
+                        暂无缩略图
+                        {/if}
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="order" class="layui-form-label">
+                       排序
+                    </label>
+                    <div class="layui-input-block">
+                        <input type="text" name="order" value="{$article.order}" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label for="see" class="layui-form-label">
+                        浏览
+                    </label>
+                    <div class="layui-input-block">
+                        <input type="text" name="see" value="{$article.see}" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <div class="layui-input-block">
+                        <textarea id="content" name="content">{$article.content}</textarea>
+                    </div>
+                    <label for="content" class="layui-form-label" style="top: -2px;">
+                        内容
+                    </label>
+                </div>
+
                 <div class="layui-form-item">
                     <input class="layui-btn" type="submit" value="立即发布" lay-filter="add" lay-submit>
                        
