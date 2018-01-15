@@ -4,6 +4,8 @@ use think\Model;
 use think\Request;
 use Qiniu\Auth;
 use Qiniu\Storage\UploadManager;
+use Qiniu\Storage\BucketManager;
+use function Qiniu\json_decode;
 
 class Article extends Model
 {
@@ -38,7 +40,7 @@ class Article extends Model
                     $ext = pathinfo($file->getInfo('name'), PATHINFO_EXTENSION);
                     //上传到七牛后保存的文件名(加盐)
                     $key = config('qiniu.salt').substr(md5($file->getRealPath()) , 0, 5). date('YmdHis') . rand(0, 9999) . '.' . $ext;
-                
+                    
                     $ak = config('qiniu.ak');
                     $sk = config('qiniu.sk');
                 
@@ -55,7 +57,7 @@ class Article extends Model
                     //调用uploadmanager的putfile方法进行文件的上传
                     list($ret, $err) = $uploadMgr->putFile($token, $key, $filePath);
                 
-                    $err ? $_data['thumb'] = '图片上传失败' : $_data['thumb'] = 'http://'.$domain.'/'.$ret['key'];    //or https
+                    $err ? $_data['thumb'] = '图片上传失败' : $_data['thumb'] = $domain.'/'.$ret['key'];    //or https
                 
             }elseif (self::getSystem()['type'] == config('website.oss')){
                 //TODO 阿里云OSS上传功能
@@ -90,13 +92,31 @@ class Article extends Model
         });
         
         Article::event('before_delete', function($_data){
-                
-                $_arts = Article::find($_data->id); //按照id找到待修改图片的id值，为了进一步的修改图片位置
+            $_arts = Article::find($_data->id); //按照id找到待修改图片的id值，为了进一步的修改图片位置
+            
+            if (self::getSystem()['type'] == config('website.local')){
                 $_thumbpath = $_SERVER['DOCUMENT_ROOT'].$_arts['thumb'];
                 if(file_exists($_thumbpath)){
                     @unlink($_thumbpath);
                     @unlink($_SERVER['DOCUMENT_ROOT'].$_arts['pic']);
                 }
+            }elseif (self::getSystem()['type'] == config('website.qiniu')){
+                $auth      = new Auth(config('qiniu.ak'), config('qiniu.sk'));
+                
+                $config    = new \Qiniu\Config();
+                
+                $bucketMgr = new BucketManager($auth, $config);
+                $key = explode('/', $_arts['thumb'])[1];
+                $err = $bucketMgr->delete(config('qiniu.bucket'), $key);
+                if ($err) {
+                    halt($err);
+                }else {
+                    return true;
+                }
+                
+                   
+            }
+
                 
         });
         

@@ -150,6 +150,7 @@ class Article extends Base
         //cate data && article data
         $cate    = db('category')->field(['id', 'catename'])->order('sort', 'asc')->select();
         $article = db('article')->find($id);
+        $article['thumb'] = 'http://'.$article['thumb'];
         $this->assign(['cate' => $cate, 'article' => $article]);
         return $this->view->fetch('article-edit');
     }
