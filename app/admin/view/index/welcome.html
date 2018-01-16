@@ -3,7 +3,7 @@
     <body>
         <div class="x-body">
             <blockquote class="layui-elem-quote">
-                欢迎使用x-admin 后台模版！<span class="f-14">v1.0</span>官方交流群： 519492808
+                欢迎使用Alexa-Admin( 基于<a href="http://x.xuebingsi.com" style="color: #3fd6bb;" target="_blank">X-admin</a> ) 后台系统！<span class="f-14">v1.0</span>官方交流群： 101675621
             </blockquote>
             <p>登录次数：{:session('user_data.count')}</p>
             <p>登录IP：{$_SERVER['REMOTE_ADDR']}  上次登录时间： {:session('user_data.update_time')}</p>
@@ -15,10 +15,7 @@
                     <tr>
                         <th>统计</th>
                         <th>Article</th>
-                        <th>图片库</th>
-                        <th>Other</th>
-                        <th>用户</th>
-                        <th>管理员</th>
+                        <th>管理员登录</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,15 +23,9 @@
                         <td>总数</td>
                         <td>92</td>
                         <td>9</td>
-                        <td>0</td>
-                        <td>8</td>
-                        <td>20</td>
                     </tr>
                     <tr>
                         <td>今日</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
                         <td>0</td>
                         <td>0</td>
                     </tr>
@@ -42,24 +33,15 @@
                         <td>昨日</td>
                         <td>0</td>
                         <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
                     </tr>
                     <tr>
                         <td>本周</td>
                         <td>2</td>
                         <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
                     </tr>
                     <tr>
                         <td>本月</td>
                         <td>2</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
                         <td>0</td>
                     </tr>
                 </tbody>
@@ -157,14 +139,14 @@
                     </tr>
                     <tr>
                         <td>当前系统用户名 </td>
-                        <td>{$Think.session.user_name}</td>
+                        <td>{:session('user_name')}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="layui-footer footer footer-demo">
             <div class="layui-main">
-                <p>感谢layui,百度Echarts,jquery</p>
+                <p>感谢X-admin,layui,Thinkphp,百度Echarts,jquery</p>
                 <p>
                     <a href="/">
                         Copyright ©2017 x-admin v2.3 All Rights Reserved.
