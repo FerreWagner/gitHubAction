@@ -48,7 +48,7 @@ class Article extends Model
                     $uploadMgr = new UploadManager();
                     //调用uploadmanager的putfile方法进行文件的上传
                     list($ret, $err) = $uploadMgr->putFile($token, $key, $filePath);
-                    
+                    $_data['pic']    = config('qiniu.domain').'/'.$ret['key'];
                     $err ? $_data['thumb'] = '图片上传失败' : $_data['thumb'] = config('qiniu.domain').'/'.$ret['key'];
             }elseif (self::getSystem()['type'] == config('website.oss')){
                 //TODO 阿里云OSS上传功能
