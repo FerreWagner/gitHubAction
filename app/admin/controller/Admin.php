@@ -8,6 +8,7 @@ use app\admin\model\Admin as AdminModel;
 use app\admin\common\Mail;
 use think\Request;
 use think\Loader;
+use think\Validate;
 
 
 
@@ -81,6 +82,10 @@ class Admin extends Base
     public function add(Request $request)
     {
         if ($request->isPost()){
+            
+            $token      = Validate::token('__token__','',['__token__'=>input('param.__token__')]);    //CSRF validate
+            if (!$token) $this->error('CSRF ATTACK.');
+            
             $data = $request->param();
             
             if ($data['password'] != $data['repass']) $this->error('两次密填写不一致');

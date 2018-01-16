@@ -6,6 +6,7 @@ use app\admin\common\Base;
 use think\Request;
 use app\admin\model\Category as CateGoryModel;
 use think\Loader;
+use think\Validate;
 
 class Category extends Base
 {
@@ -18,12 +19,16 @@ class Category extends Base
     {
         //cate data
         $catemodel = new CateGoryModel();
-        $cate      = $catemodel->catetree();
+        $cate      = $catemodel->order('sort', 'asc')->select();
         //count cate data
         $cate_count = CateGoryModel::count();
         
         //cate add
         if($request->isPost()){
+            
+            $token      = Validate::token('__token__','',['__token__'=>input('param.__token__')]);    //CSRF validate
+            if (!$token) $this->error('CSRF ATTACK.');
+            
             $_data = input('post.');
             $validate = Loader::validate('Category');
             if(!$validate->scene('save')->check($_data)){
@@ -32,7 +37,7 @@ class Category extends Base
             
 //             $catemodel->data($_data);
 //             $_add = $catemodel->save();
-            $_add = $catemodel->create($_data);
+            $_add = $catemodel->allowField(true)->save($_data);
             $_add ? $this->redirect('admin/category/index') : $this->error('Add Cate Error.Dear');
         }
         

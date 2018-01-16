@@ -21,6 +21,7 @@
                     <div class="layui-input-inline">
                       <input type="text" name="sort" placeholder="排序" autocomplete="off" class="layui-input">
                     </div>
+                    {:token()}
                     <div class="layui-input-inline" style="width:80px">
                         <button class="layui-btn" lay-submit="" lay-filter="*" id="btnlink"><i class="layui-icon"></i>添加</button>
                     </div>
@@ -55,7 +56,7 @@
 	                        <td>
 	                            {$ca.sort}
 	                        </td>
-	                        <td>{if condition="$ca.level neq 0"}*{/if}<?php echo str_repeat('-',$ca['level']*4);?>{$ca.catename}</td>
+	                        <td>{$ca.catename}</td>
 	                        <td class="td-manage">
 	                            <a title="编辑" href="{:url('admin/category/edit', array('id'=>$ca['id']))}" class="ml-5" style="text-decoration:none">
 	                                <i class="layui-icon">&#xe642;</i>
