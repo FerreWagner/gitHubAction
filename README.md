@@ -9,6 +9,8 @@
 
 演示地址：[http://admin.ferre.top/admin](http://admin.ferre.top/admin "Alexa-Admin")
 
+登录用户名：root		  密码：1234
+
 > 
 > Because the Ferre's energy is limited, and now is the rudiment of the project, the author will update and maintain it regularly, or it will not update for a long time. I'm sorry to sacrifice your reading time.
 
