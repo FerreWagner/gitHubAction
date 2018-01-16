@@ -7,6 +7,8 @@
 
 一个基于Thinkphp5.0.12和X-Admin1.0的后台管理系统。
 
+演示地址：[http://admin.ferre.top/admin](http://admin.ferre.top/admin "Alexa-Admin")
+
 > 
 > Because the Ferre's energy is limited, and now is the rudiment of the project, the author will update and maintain it regularly, or it will not update for a long time. I'm sorry to sacrifice your reading time.
 
@@ -87,3 +89,9 @@
 
 ##  **版权信息**
 由Ferre开发 请自行遵循以上项目的协议
+
+金钱：
+请尽量使用七牛云提供的原图保护功能，防止恶意盗链行为，以免给您带来不必要的财产损失,具体访问方式请参照七牛云官方文档,谢谢
+
+账户及密码：
+请勿在任何公共网络泄露您的邮箱账户和密码,谢谢
