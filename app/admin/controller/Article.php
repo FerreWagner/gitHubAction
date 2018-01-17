@@ -6,9 +6,6 @@ use think\Request;
 use app\admin\common\Base;
 use think\Loader;
 use app\admin\model\Article as ArticleModel;
-use app\admin\common\Mail;
-use Qiniu\Auth;
-use Qiniu\Storage\UploadManager;
 use think\Validate;
 
 class Article extends Base
