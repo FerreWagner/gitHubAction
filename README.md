@@ -1,9 +1,13 @@
-# This is a backstage management system based on Thinkphp5.0.12 and X-Admin1.0 #
+<p align="center"><img src="https://raw.githubusercontent.com/FreeSpider/Resources/master/img/alexa-logo.png"></p>
+<p align="center">
 
+<a href="https://travis-ci.org/FreeSpider/Alexa-Admin"><img src="https://img.shields.io/github/release/FreeSpider/Alexa-Admin.svg"></a>
+<a href="#"><img src="https://img.shields.io/badge/language-php-45d298.svg"></a>
+</p>
 
-----------
+<br />
 
-
+## This is a backstage management system based on Thinkphp5.0.12 and X-Admin1.0 ##
 
 一个基于Thinkphp5.0.12和X-Admin1.0的后台管理系统。
 
@@ -14,8 +18,7 @@
 > 
 > Because the Ferre's energy is limited, and now is the rudiment of the project, the author will update and maintain it regularly, or it will not update for a long time. I'm sorry to sacrifice your reading time.
 
-## **为什么要重复造轮子?**
-
+## 为什么要重复造轮子? ##
 
 
 
