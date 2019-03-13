@@ -63,10 +63,9 @@ class Article extends Base
     {
         //add
         if ($request->isPost()){
-            
             $token      = Validate::token('__token__','',['__token__'=>input('param.__token__')]);    //CSRF validate
             if (!$token) $this->error('CSRF ATTACK.');
-            
+
             $data = input('post.');
             $data['time'] = time();    //写入时间戳
             $validate = Loader::validate('Article');

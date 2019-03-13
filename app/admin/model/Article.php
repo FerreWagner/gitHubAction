@@ -12,12 +12,12 @@ class Article extends Model
     /**
      *对文章图片的处理 
      */
+    protected static $default_pic = 'https://raw.githubusercontent.com/FreeSpider/Resources/master/img/alexa-logo.png';
     
     protected static function init(){
         Article::event('before_insert', function($_data){
             if (self::getSystem()['type'] == config('website.local')){
                 if(@$_FILES['thumb']['tmp_name']){
-                    
                     $_file = request()->file('thumb');
                     $_info = $_file->move(ROOT_PATH . 'public' . DS . 'uploads');
                     if ($_info){    //upload success
@@ -28,8 +28,13 @@ class Article extends Model
                         $ferrePic       = $ferreImg->cutImg($detail_pic, 570, 750, 'alexa', 20, $ferrePath);    //具体详见参数
                         $_data['thumb'] = '/uploads/thumb/'.$ferrePic;
                         $_data['pic']   = '/uploads/' . $_info->getSaveName();
+
                         return $_data['thumb'] ? ['err' => 0, 'msg' => '上传完成', 'data' => $_data['thumb']] : ['err' => 1, 'msg' => '本地上传失败', 'data' => ''];
                     }
+                }else{
+                    $_data['thumb'] = self::$default_pic;
+                    $_data['pic'] = self::$default_pic;
+                    return $_data['thumb'] ? ['err' => 0, 'msg' => '上传完成', 'data' => $_data['thumb']] : ['err' => 1, 'msg' => '本地上传失败', 'data' => ''];
                 }
             }elseif (self::getSystem()['type'] == config('website.qiniu')){
                 
