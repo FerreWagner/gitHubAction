@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+  
+  <head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.1</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    {include file="public/header" /}
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+    <div class="x-body">
+        <form class="layui-form">
+        <input type="hidden" name="id" value="{$read.id}">
+          <div class="layui-form-item">
+              <label for="title" class="layui-form-label">
+                  <span class="x-red">*</span>标题
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="title" name="title" value="{$read.title}" required="" lay-verify="" autocomplete="off" class="layui-input">
+              </div>
+              <div class="layui-form-mid layui-word-aux">
+                  <span class="x-red">*</span>Title
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label for="cate" class="layui-form-label">
+                  <span class="x-red">*</span>类型
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="cate" name="cate" required="" value="{$read.cate}" lay-verify="" autocomplete="off" class="layui-input">
+              </div>
+          </div>
+            <div class="layui-form-item">
+                <label for="author" class="layui-form-label">
+                    <span class="x-red">*</span>作者
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="author" name="author" value="{$read.author}" required="" lay-verify="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="startTime" class="layui-form-label">
+                    <span class="x-red">*</span>开始时间
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="startTime" name="startTime">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="endTime" class="layui-form-label">
+                    <span class="x-red">*</span>结束时间
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="endTime" name="endTime">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="comment" class="layui-form-label">
+                    <span class="x-red">*</span>书评
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="comment" name="comment" value="{$read.comment}" required="" lay-verify="url" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="sort" class="layui-form-label">
+                    <span class="x-red">*</span>排序
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="sort" name="sort" value="{$read.sort}" required="" lay-verify="number" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+          <div class="layui-form-item">
+              </label>
+              <button  class="layui-btn" lay-filter="add" lay-submit="">
+                  增加
+              </button>
+          </div>
+      </form>
+    </div>
+    <script>
+        layui.use('laydate', function(){
+            var laydate = layui.laydate;
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#startTime', //指定元素
+                type: 'datetime',
+                value: "{$read.startTime}",
+                trigger: 'click'
+            });
+        });
+        layui.use('laydate', function(){
+            var laydate = layui.laydate;
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#endTime', //指定元素
+                type: 'datetime',
+                value: "{$read.endTime}",
+                trigger: 'click'
+            });
+        });
+
+        layui.use(['form','layer'], function(){
+            $ = layui.jquery;
+          var form = layui.form
+          ,layer = layui.layer;
+
+          //监听提交
+          form.on('submit(add)', function(data){
+            console.log(data);
+              //发异步，将数据提交给php
+              $.ajax({
+                  type: 'POST',
+                  url: "{:url('admin/read/edit')}",
+                  data: data['field'],
+                  success: function (redata) {
+                      console.log(redata);
+                      if (redata.code == 1){
+                          layer.msg(redata.msg, {icon: 5});
+                      }else {
+                          layer.alert(redata.msg, {icon: 6},function () {
+                              // 可以对父窗口进行刷新
+                              x_admin_father_reload();
+                              //关闭当前frame
+                              x_admin_close();
+                          });
+                      }
+
+                  },
+                  error: function () {
+                      layer.msg('添加失败', {icon: 5});
+                  },
+                  dataType: "json",
+              });
+            return false;
+          });
+          
+          
+        });
+    </script>
+    <script>var _hmt = _hmt || []; (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();</script>
+  </body>
+
+</html>

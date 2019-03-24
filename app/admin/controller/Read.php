@@ -70,7 +70,34 @@ class Read extends Base
      * @param  int  $id
      * @return \think\Response
      */
-    public function edit(Request $request, $id)
+    public function edit()
+    {
+        $id = \request()->param('id');
+        if (\request()->isPost()){
+            $data     = \request()->param();
+            $validate = Loader::validate('read');
+            if(!$validate->scene('edit')->check($data)){
+                $this->error($validate->getError());
+            }
+            $read = new readModel;
+            $save = $read->update($data);
+            if($save){
+                return json(['code' => 0, 'msg' => '更新成功']);
+            }
+            return json(['code' => 1, 'msg' => '更新失败']);
+        }
+        $read = db('read')->find($id);
+        $this->assign(['read' => $read]);
+        return $this->view->fetch('read-edit');
+    }
+
+    /**
+     * 显示编辑资源表单页.
+     *
+     * @param  int  $id
+     * @return \think\Response
+     */
+    public function edit1(Request $request, $id)
     {
         if ($request->isPost()){
             $data = $request->param();
