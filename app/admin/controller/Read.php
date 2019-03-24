@@ -36,14 +36,14 @@ class Read extends Base
         
         //list
         $this->view->assign([
-            'read'  => $read,
+            'reads'  => $read,
             'count' => $count,
         ]);
         return $this->view->fetch('read-list');
     }
 
     /**
-     * @return string
+     * @return string|\think\response\Json
      * add view page
      */
     public function add()
@@ -64,36 +64,6 @@ class Read extends Base
         return $this->view->fetch('read-add');
     }
 
-    /**
-     * 保存新建的资源
-     *
-     * @param  \think\Request  $request
-     * @return \think\Response
-     */
-    public function add1(Request $request)
-    {
-        //add
-        if ($request->isPost()){
-            $token      = Validate::token('__token__','',['__token__'=>input('param.__token__')]);    //CSRF validate
-            if (!$token) $this->error('CSRF ATTACK.');
-
-            $data = input('post.');
-            $data['time'] = time();    //写入时间戳
-            $validate = Loader::validate('read');
-            if(!$validate->scene('add')->check($data)){
-                $this->error($validate->getError());
-            }
-            $read = new readModel();
-            if($read->allowField(true)->save($data)){
-                $this->redirect('admin/read/index');
-            }else{
-                $this->error('添加失败');
-            }
-        }
-        //page
-        return $this->view->fetch('read-add');
-    }
-    
     /**
      * 显示编辑资源表单页.
      *
