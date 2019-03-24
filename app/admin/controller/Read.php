@@ -5,7 +5,7 @@ namespace app\admin\controller;
 use think\Request;
 use app\admin\common\Base;
 use think\Loader;
-use app\admin\model\read as readModel;
+use app\admin\model\Read as readModel;
 use think\Validate;
 
 class Read extends Base
@@ -56,19 +56,15 @@ class Read extends Base
                 $this->error($validate->getError());
             }
             $read = new readModel();
-            if($read->allowField(true)->save($data)){
-                return json(['code' => 0, 'msg' => '新增成功']);
-            }
+            if($read->allowField(true)->save($data)) return json(['code' => 0, 'msg' => '新增成功']);
             return json(['code' => 1, 'msg' => '新增失败']);
         }
         return $this->view->fetch('read-add');
     }
 
     /**
-     * 显示编辑资源表单页.
-     *
-     * @param  int  $id
-     * @return \think\Response
+     * @return string|\think\response\Json
+     * update data
      */
     public function edit()
     {
@@ -81,9 +77,7 @@ class Read extends Base
             }
             $read = new readModel;
             $save = $read->update($data);
-            if($save){
-                return json(['code' => 0, 'msg' => '更新成功']);
-            }
+            if($save) return json(['code' => 0, 'msg' => '更新成功']);
             return json(['code' => 1, 'msg' => '更新失败']);
         }
         $read = db('read')->find($id);
@@ -91,41 +85,19 @@ class Read extends Base
         return $this->view->fetch('read-edit');
     }
 
-    /**
-     * 显示编辑资源表单页.
-     *
-     * @param  int  $id
-     * @return \think\Response
-     */
-    public function edit1(Request $request, $id)
+    public function switches()
     {
-        if ($request->isPost()){
-            $data = $request->param();
-            $validate = Loader::validate('read');
-            if(!$validate->scene('edit')->check($data)){
-                $this->error($validate->getError());
+        if (\request()->isAjax()){
+            $id = \request()->param('id');
+            $re = db('read')->find($id);
+            if ($id && !empty($re)){
+                $is_del = $re['is_del'] == 0 ? 1 : 0;
+                $result = readModel::update(['id' => $id, 'is_del' => $is_del]);
+                if ($result) return json(['code' => 0, 'msg' => '更新成功']);
+                return json(['code' => 0, 'msg' => '更新失败']);
             }
-            $read = new readModel;
-            $save=$read->update($data);
-            if($save){
-                $this->success('修改文章成功！',url('admin/read/index'));
-            }else{
-                $this->error('修改文章失败！');
-            }
-            return;
         }
-        //cate data && read data
-        $cate    = db('category')->field(['id', 'catename'])->order('sort', 'asc')->select();
-        $read = db('read')->find($id);
-        
-        $type    = readModel::getSystem()['type'];   //缩略图type
-        
-        //当然这里只是做简略处理，为了不让read表性能变低，我们将type字段分离到system表，如果在三方服务器和本地均存有图片，那么我们可以通过判断路径名来确定是否添加http://这样的完整路径
-        $read['thumb'] = $type == 0 ? $read['thumb'] : 'http://'.$read['thumb'];
-        $this->assign(['cate' => $cate, 'read' => $read]);
-        return $this->view->fetch('read-edit');
     }
-
 
     /**
      * 删除指定资源
@@ -142,24 +114,4 @@ class Read extends Base
         }
     }
     
-    /**
-     * 邮件服务
-     */
-//     public function mailServe()
-//     {
-//         if (Mail::isMail() == config('mail.close')) return true;
-        
-//         $user_email = session('user_data')['email'];
-// //         halt($user_email);
-//         $mail = new Mail();
-//         $mail->getXml('admin');
-//         $mail->recive = $user_email;
-//         $mail->init();
-//         $mail->content();
-//         $mail->replay();
-//         if (!$mail->send()){
-//             $this->error('Mail Server Error.');
-//         }
-        
-//     }
 }

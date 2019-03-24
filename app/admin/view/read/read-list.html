@@ -68,15 +68,16 @@
               <td>{$read.endTime}</td>
               <td><a href="{$read.comment}" target="_blank">{$read.comment}</a></td>
               <td class="td-status">
-                <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>
+                <span class="layui-btn layui-btn-normal layui-btn-mini {if condition="$read.is_del eq 1"}layui-btn-disabled{/if}">{if condition="$read.is_del eq 0"}已启用{else /}已停用{/if}</span></td>
               <td class="td-manage">
                 <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-                  <i class="layui-icon">&#xe601;</i>
+                  <i class="layui-icon">{if condition="$read.is_del eq 0"}&#xe601;{else /}&#xe62f;{/if}</i>
                 </a>
                 <a title="编辑"  onclick="x_admin_show('编辑','./edit/id/{$read.id}',500,500)" href="javascript:;">
                   <i class="layui-icon">&#xe642;</i>
                 </a>
               </td>
+              <input  type="hidden" name="id" id="id" value="{$read.id}"/>
             </tr>
             {/volist}
 
@@ -109,20 +110,54 @@
           layer.confirm('确认要停用吗？',function(index){
 
               if($(obj).attr('title')=='启用'){
+                  //ajax 请求
+                  $.ajax({
+                      type: 'POST',
+                      url: "{:url('admin/read/switches')}",
+                      data: $("#id"),
+                      success: function (redata) {
+                          console.log(redata);
+                          if (redata.code == 1){
+                              layer.msg(redata.msg, {icon: 5});
+                          }else {
+                              layer.alert(redata.msg, {icon: 6},function () {
+                                  // 可以对父窗口进行刷新
+                                  x_admin_father_reload();
+                                  //关闭当前frame
+                                  x_admin_close();
+                              });
+                          }
 
-                //发异步把用户状态进行更改
-                $(obj).attr('title','停用')
-                $(obj).find('i').html('&#xe62f;');
-
-                $(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('已停用');
-                layer.msg('已停用!',{icon: 5,time:1000});
-
+                      },
+                      error: function () {
+                          layer.msg('添加失败', {icon: 5});
+                      },
+                      dataType: "json",
+                  });
               }else{
-                $(obj).attr('title','启用')
-                $(obj).find('i').html('&#xe601;');
+                  $.ajax({
+                      type: 'POST',
+                      url: "{:url('admin/read/switches')}",
+                      data: $("#id"),
+                      success: function (redata) {
+                          console.log(redata);
+                          if (redata.code == 1){
+                              layer.msg(redata.msg, {icon: 5});
+                          }else {
+                              layer.alert(redata.msg, {icon: 6},function () {
+                                  // 可以对父窗口进行刷新
+                                  x_admin_father_reload();
+                                  //关闭当前frame
+                                  x_admin_close();
+                              });
+                          }
 
-                $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已启用');
-                layer.msg('已启用!',{icon: 5,time:1000});
+                      },
+                      error: function () {
+                          layer.msg('添加失败', {icon: 5});
+                      },
+                      dataType: "json",
+                  });
               }
               
           });
