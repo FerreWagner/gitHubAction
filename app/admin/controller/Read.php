@@ -85,6 +85,10 @@ class Read extends Base
         return $this->view->fetch('read-edit');
     }
 
+    /**
+     * @return \think\response\Json
+     * 启用转换
+     */
     public function switches()
     {
         if (\request()->isAjax()){
@@ -97,6 +101,12 @@ class Read extends Base
                 return json(['code' => 0, 'msg' => '更新失败']);
             }
         }
+    }
+
+    public function buildMarkdown()
+    {
+        $data = db('read')->field('id,title,cate,author,startTime,endTime,comment')->order('id asc')->select();
+        halt($data);
     }
 
     /**
