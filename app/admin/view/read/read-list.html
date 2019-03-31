@@ -70,14 +70,14 @@
               <td class="td-status">
                 <span class="layui-btn layui-btn-normal layui-btn-mini {if condition="$read.is_del eq 1"}layui-btn-disabled{/if}">{if condition="$read.is_del eq 0"}已启用{else /}已停用{/if}</span></td>
               <td class="td-manage">
-                <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
+                <a onclick="member_stop(this,'{$read.id}')" href="javascript:;"  title={if condition="$read.is_del eq 0"}停用{else /}启用{/if}>
                   <i class="layui-icon">{if condition="$read.is_del eq 0"}&#xe601;{else /}&#xe62f;{/if}</i>
                 </a>
                 <a title="编辑"  onclick="x_admin_show('编辑','./edit/id/{$read.id}',500,500)" href="javascript:;">
                   <i class="layui-icon">&#xe642;</i>
                 </a>
               </td>
-              <input  type="hidden" name="id" id="id" value="{$read.id}"/>
+              <input  type="hidden" name="id" value="{$read.id}"/>
             </tr>
             {/volist}
 
@@ -107,14 +107,15 @@
 
        /*用户-停用*/
       function member_stop(obj,id){
-          layer.confirm('确认要停用吗？',function(index){
+          titles = '确认要' + $(obj).attr('title') + '吗？';
+          layer.confirm(titles,function(index){
 
               if($(obj).attr('title')=='启用'){
                   //ajax 请求
                   $.ajax({
                       type: 'POST',
                       url: "{:url('admin/read/switches')}",
-                      data: $("#id"),
+                      data: {id: id},
                       success: function (redata) {
                           console.log(redata);
                           if (redata.code == 1){
@@ -138,7 +139,7 @@
                   $.ajax({
                       type: 'POST',
                       url: "{:url('admin/read/switches')}",
-                      data: $("#id"),
+                      data: {id: id},
                       success: function (redata) {
                           console.log(redata);
                           if (redata.code == 1){

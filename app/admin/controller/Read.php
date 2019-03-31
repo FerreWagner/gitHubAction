@@ -91,8 +91,8 @@ class Read extends Base
             $id = \request()->param('id');
             $re = db('read')->find($id);
             if ($id && !empty($re)){
-                $is_del = $re['is_del'] == 0 ? 1 : 0;
-                $result = readModel::update(['id' => $id, 'is_del' => $is_del]);
+                $is_del = $re['is_del'] == 1 ? 0 : 1;
+                $result = readModel::update(['is_del' => $is_del, 'id' => $id]);
                 if ($result) return json(['code' => 0, 'msg' => '更新成功']);
                 return json(['code' => 0, 'msg' => '更新失败']);
             }
