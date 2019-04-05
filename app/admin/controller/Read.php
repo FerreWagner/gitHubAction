@@ -103,6 +103,10 @@ class Read extends Base
         }
     }
 
+    /**
+     * @return \think\response\Json
+     * 桌面生成md
+     */
     public function buildMarkdown()
     {
         $data = "# Read Plan #
@@ -114,26 +118,30 @@ class Read extends Base
 
 <table>
 <tr><td>ID</td><td>Name</td><td>Cate</td><td>Author</td><td>StartTime</td><td>EndTime</td><td>Comment</td></tr>
-";
-        $data .= "";
-        $data .= '<tr>
-        <td>1</td>
-		<td>美国国会</td>
-		<td>政治</td>
-		<td></td>
-        <td>2018-05-09</td>
-		<td>2018-07-20</td>
-		<td><a href="https://book.douban.com/subject/26846919/" target="_blank">豆瓣</a></td>
-    </tr>';
+        ";
 
-        $data .= "</table>";
+        $tmp = db('read')->where(['is_del' => 0])->order('startTime asc')->select();
+        foreach ($tmp as $k => $v){
+            $data .= '
+                <tr>
+                    <td>'.$v['id'].'</td>
+                    <td>'.$v['title'].'</td>
+                    <td>'.$v['cate'].'</td>
+                    <td>'.$v['author'].'</td>
+                    <td>'.$v['startTime'].'</td>
+                    <td>'.$v['endTime'].'</td>
+                    <td><a href="'.$v['comment'].'" target="_blank">豆瓣</a></td>
+                </tr>
+            ';
+        }
+
+        $data    .= "</table>";
         $filename = 'readme'.time();
-        $cate = '.md';
+        $cate     = '.md';
 
-        if (!is_dir('mdfile')) mkdir('mdfile');
         $filename = "C:/Users/15736/Desktop/".$filename.'.'.$cate;
-        $fp= fopen($filename, "x");
-        $len = fwrite($fp,$data);
+        $fp       = fopen($filename, "x");
+        $len      = fwrite($fp,$data);
         if ($len){
             fclose($fp);
             return json(['code' => 1, 'msg' => '生成MD成功']);
