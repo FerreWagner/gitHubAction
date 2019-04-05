@@ -105,8 +105,44 @@ class Read extends Base
 
     public function buildMarkdown()
     {
-        $data = db('read')->field('id,title,cate,author,startTime,endTime,comment')->order('id asc')->select();
-        halt($data);
+        $data = "# Read Plan #
+
+
+----------
+
+根据阅读计划、阅读起始时间、对应书评的Tag
+
+<table>
+<tr><td>ID</td><td>Name</td><td>Cate</td><td>Author</td><td>StartTime</td><td>EndTime</td><td>Comment</td></tr>
+";
+        $data .= "";
+        $data .= '<tr>
+        <td>1</td>
+		<td>美国国会</td>
+		<td>政治</td>
+		<td></td>
+        <td>2018-05-09</td>
+		<td>2018-07-20</td>
+		<td><a href="https://book.douban.com/subject/26846919/" target="_blank">豆瓣</a></td>
+    </tr>';
+
+        $data .= "</table>";
+        $filename = 'readme'.time();
+        $cate = '.md';
+
+//        if (!is_dir('mdfile')) mkdir('mdfile');
+//        $filename = './mdfile/'.$filename.'.'.$cate;
+//        $fp= fopen($filename, "x");
+//        $len = fwrite($fp,$data);
+
+        header("Content-type:application/octet-stream");
+        header("Accept-Ranges:bytes");
+        header("Content-Disposition:attachment;filename=$filename.$cate");
+        header("Expires:0");
+        header("Cache-Control:must-revalidate,post-check=0,pre-check=0 ");
+        header("Pragma:public");
+//        iconv("UTF-8", "GB2312", $data);
+        exit();
     }
 
     /**
