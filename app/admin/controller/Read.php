@@ -130,19 +130,18 @@ class Read extends Base
         $filename = 'readme'.time();
         $cate = '.md';
 
-//        if (!is_dir('mdfile')) mkdir('mdfile');
-//        $filename = './mdfile/'.$filename.'.'.$cate;
-//        $fp= fopen($filename, "x");
-//        $len = fwrite($fp,$data);
+        if (!is_dir('mdfile')) mkdir('mdfile');
+        $filename = "C:/Users/15736/Desktop/".$filename.'.'.$cate;
+        $fp= fopen($filename, "x");
+        $len = fwrite($fp,$data);
+        if ($len){
+            fclose($fp);
+            return json(['code' => 1, 'msg' => '生成MD成功']);
+        }else{
+            return json(['code' => 0, 'msg' => '生成失败']);
+        }
 
-        header("Content-type:application/octet-stream");
-        header("Accept-Ranges:bytes");
-        header("Content-Disposition:attachment;filename=$filename.$cate");
-        header("Expires:0");
-        header("Cache-Control:must-revalidate,post-check=0,pre-check=0 ");
-        header("Pragma:public");
-//        iconv("UTF-8", "GB2312", $data);
-        exit();
+
     }
 
     /**
