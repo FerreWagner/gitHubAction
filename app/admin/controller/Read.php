@@ -18,7 +18,6 @@ class Read extends Base
 //         'mailServe' => ['only' => 'delete'],    //前置操作的方法请勿在前添加空格
 //     ];
     
-    
     /**
      * 显示资源列表
      *
@@ -26,17 +25,18 @@ class Read extends Base
      */
     public function index(Request $request)
     {
-        $read  = db('read')->field('sort', true)->order('sort desc')->paginate(config('conf.page'));
-        $count = db('read')->count();
         //search function
         if ($request->isPost()){
-            $search  = $request->param();
-            //TODO
+            $search  = $request->param('research');
+            $read    = db('read')->field('sort', true)->order('sort desc')->where('title|cate|author','like','%'.$search.'%')->paginate(config('conf.page'));
+        }else{
+            $read    = db('read')->field('sort', true)->order('sort desc')->paginate(config('conf.page'));
         }
-        
+
+        $count       = db('read')->count();
         //list
         $this->view->assign([
-            'reads'  => $read,
+            'reads' => $read,
             'count' => $count,
         ]);
         return $this->view->fetch('read-list');
@@ -123,21 +123,21 @@ class Read extends Base
         $tmp = db('read')->where(['is_del' => 0])->order('startTime asc')->select();
         foreach ($tmp as $k => $v){
             $data .= '
-                <tr>
-                    <td>'.$v['id'].'</td>
-                    <td>'.$v['title'].'</td>
-                    <td>'.$v['cate'].'</td>
-                    <td>'.$v['author'].'</td>
-                    <td>'.$v['startTime'].'</td>
-                    <td>'.$v['endTime'].'</td>
-                    <td><a href="'.$v['comment'].'" target="_blank">豆瓣</a></td>
-                </tr>
+<tr>
+    <td>'.$v['id'].'</td>
+    <td>'.$v['title'].'</td>
+    <td>'.$v['cate'].'</td>
+    <td>'.$v['author'].'</td>
+    <td>'.$v['startTime'].'</td>
+    <td>'.$v['endTime'].'</td>
+    <td><a href="'.$v['comment'].'" target="_blank">豆瓣</a></td>
+</tr>
             ';
         }
 
         $data    .= "</table>";
         $filename = 'readme'.time();
-        $cate     = '.md';
+        $cate     = 'md';
 
         $filename = "C:/Users/15736/Desktop/".$filename.'.'.$cate;
         $fp       = fopen($filename, "x");
